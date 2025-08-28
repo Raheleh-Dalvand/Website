@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DataCraft by Raheleh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background: #f1f5f9;
+      color: #1f2937;
+      overflow: hidden;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      background-color: #0f172a;
+      color: white;
+      padding: 20px 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      user-select: none;
+      text-align: center;
+      font-style: normal;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-shadow: 0 0 5px rgba(255,255,255,0.2);
+    }
+    header p {
+      margin: 6px 0 0;
+      font-size: 16px;
+      color: #cbd5e1;
+      font-weight: 400;
+      font-style: italic;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 0.5px;
+    }
+    .home-badge {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      background-color: #e0f2fe;
+      color: #0369a1;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 18px;
+      border-radius: 24px;
+      box-shadow: 0 4px 12px rgba(3,105,161,0.3);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      user-select: none;
+      z-index: 9999;
+    }
+    .home-badge .material-icons {
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .container {
+      display: flex;
+      height: calc(100vh - 88px);
+      width: 100%;
+      background: transparent;
+      overflow: visible; /* Let sidebar border-radius show */
+    }
+    
+  .sidebar {
+   width: 260px;
+   background-color: #1e293b;
+   padding: 30px 20px;
+   overflow-y: auto;
+   box-shadow: inset -1px 0 0 #334155;
+   color: #cbd5e1;
+   user-select: none;
+   border-radius: 0; /* No rounding at all */
+   z-index: 1;
+}
+
+
+    .sidebar h2 {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+      color: #94a3b8;
+      font-weight: 600;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 6px;
+    }
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 12px 10px;
+      border-radius: 8px;
+      font-weight: 600;
+      color: #cbd5e1;
+      transition: background-color 0.25s ease;
+    }
+    .menu-item:hover {
+      background-color: #334155;
+    }
+    .menu-item span:first-child {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .menu-item .material-icons {
+      font-size: 20px;
+      color: #94a3b8;
+      transition: transform 0.3s ease;
+    }
+    .menu-item[aria-expanded="true"] .material-icons {
+      transform: rotate(180deg);
+    }
+    ul.submenu {
+      list-style: none;
+      margin: 10px 0 0 0;
+      padding-left: 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    ul.submenu.open {
+      max-height: 800px;
+    }
+    ul.submenu li {
+      margin-bottom: 8px;
+    }
+    ul.submenu li a {
+      display: block;
+      color: #cbd5e1;
+      font-size: 14px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
+    }
+    ul.submenu li a:hover {
+      background-color: #3b82f6;
+      color: white;
+    }
+
+    main.content {
+      flex: 1;
+      padding: 50px;
+      overflow-y: auto;
+      background: white;
+      /* No border-radius on left side corners */
+      border-top-right-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .about-me {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      border-radius: 16px;
+      padding: 32px 40px;
+      color: white;
+      box-shadow: 0 10px 25px rgba(59,130,246,0.4);
+      margin-bottom: 48px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .about-me h2 {
+      font-weight: 700;
+      font-size: 28px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+    .about-me p {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 400;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+      gap: 30px;
+    }
+    .card {
+      background: linear-gradient(to bottom right, #ffffff, #f8fafc);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      font-size: 20px;
+      color: #1d4ed8;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .card p {
+      font-size: 14px;
+      color: #475569;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .card a {
+      text-decoration: none;
+      color: white;
+      background-color: #1d4ed8;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+      box-shadow: 0 6px 16px rgba(29,78,216,0.6);
+      transition: background-color 0.3s ease;
+    }
+    .card a:hover {
+      background-color: #2563eb;
+      box-shadow: 0 8px 22px rgba(37,99,235,0.8);
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px 30px;
+      background-color: #f3f4f6;
+      font-size: 14px;
+      color: #64748b;
+    }
+
+    .sidebar::-webkit-scrollbar,
+    main.content::-webkit-scrollbar {
+      width: 8px;
+    }
+    .sidebar::-webkit-scrollbar-thumb,
+    main.content::-webkit-scrollbar-thumb {
+      background-color: rgba(100, 116, 139, 0.5);
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      body, html {
+        overflow: auto;
+      }
+      .container {
+        flex-direction: column;
+        height: auto;
+      }
+      .sidebar {
+        width: 100%;
+        max-height: none;
+        border-radius: 0 0 16px 16px;
+        padding: 16px 20px;
+        margin-bottom: 24px;
+      }
+      main.content {
+        padding: 30px 20px;
+        border-radius: 0 0 16px 16px;
+      }
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+      .home-badge {
+        position: static;
+        margin: 0 auto 30px;
+        width: fit-content;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>DataCraft by Raheleh</h1>
+  <p>Curated learning & project examples </p>
+</header>
+
+<div class="home-badge">
+  <span class="material-icons">home</span>
+  You are on the Home Page
+</div>
+
+<div class="container">
+   <aside class="sidebar">
+    <h2>Topics</h2>
+    <div class="menu-item" onclick="toggleDropdown()" aria-expanded="false">
+      <span><span class="material-icons">folder</span> About Me</span>
+      <span class="material-icons">expand_more</span>
+    </div>
+    <ul class="submenu" id="acMenu">
+      <li><a href="" ></a></li>
+      <li><a href="" ></a></li>
+      <li><a href="" ></a></li>
+      <li><a href="" ></a></li>
+      <li><a href="" ></a></li>
+      <li><a href="" ></a></li>
+      <li><a href="" ></a></li>
+      <li><a href="" ></a></li>
+    </ul>
+  </aside>
+  
+  <main class="content">
+    <section class="about-me">
+      <h2>About This Website</h2>
+      <p>
+        Hi! I'm Raheleh, passionate about all things data — from data analytics to data science and data engineering. 
+        This website is my personal learning journey where I explore, experiment, and share everything I’m learning about working with data. 
+        Whether it’s analyzing trends, building models, or designing data pipelines, I’m always excited to dive deeper and grow in this ever-evolving field.
+        Feel free to explore and connect!       
+      </p>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="card">
+        <h3>Power BI</h3>
+        <p>Learn how to transform your data into insights using interactive dashboards and reports with Power BI.</p>
+        <a href="powerbi.html">View Full Catalog</a>
+      </article>
+      <article class="card">
+        <h3>Machine Leaning Project<br> Using Python</h3>
+        <p>develop a complete machine learning project in Python, from data handling to model deployment.</p>
+        <a href="ML.html">View Full Catalog</a>
+      </article>
+      <article class="card">
+        <h3>Python for Data Analytics</h3>
+        <p>Master Python basics and libraries like pandas, NumPy, and Matplotlib to analyze and visualize data.</p>
+        <a href="PythonDataAnalyticVersion.html">View Full Catalog</a>
+      </article>
+      <article class="card">
+        <h3>Python for Data Science</h3>
+        <p>Learn core data science skills with Python: preprocessing, modeling, and evaluation.</p>
+        <a href="PythonDataScience.html">View Full Catalog</a>
+      </article>
+      <article class="card">
+        <h3>SQL Server</h3>
+        <p>Master SQL for querying, transforming, and managing data across analytics and engineering tasks.</p>
+        <a href="#">View Full Catalog</a>
+      </article>
+      <article class="card">
+        <h3>Azure Data Factory<br>(Data Engineering)</h3>
+        <p>Build and manage data pipelines in the cloud with ADF.</p>
+        <a href="#">View Full Catalog</a>
+      </article>
+      <article class="card">
+        <h3>Adobe Campaign Classic <br>(Data Engineering)</h3>
+        <p>A growing collection of practical notes in Adobe Campaign Classic.Focused on ETL workflows</p>
+        <a href="AdobeVersion.html">View Full Catalog</a>
+      </article>
+    </section>
+  </main>
+</div>
+
+<footer>
+  &copy; 2025 Raheleh — All rights reserved
+</footer>
+
+<script>
+  function toggleDropdown() {
+    const menu = document.getElementById('acMenu');
+    const btn = document.querySelector('.menu-item');
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      menu.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+</script>
+
+</body>
+</html>
