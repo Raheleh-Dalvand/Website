@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aggregation Functions</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Inter', sans-serif;
+    background: #f1f5f9;
+    color: #1f2937;
+  }
+  header {
+    background-color: #0f172a;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  header p {
+    margin: 6px 0 0;
+    font-style: italic;
+    color: #cbd5e1;
+    font-weight: 400;
+  }
+  .back-link {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 10000;
+    cursor: pointer;
+  }
+  .back-link .material-icons {
+    font-size: 20px;
+  }
+  .main-layout {
+    display: flex;
+    height: calc(100vh - 88px);
+    padding: 30px;
+    gap: 30px;
+  }
+  .sidebar {
+    width: 260px;
+    background-color: #1e293b;
+    padding: 30px 20px;
+    overflow-y: auto;
+    color: #cbd5e1;
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 88px);
+    flex-shrink: 0;
+    border-radius: 0 0 16px 16px;
+  }
+  .sidebar h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #94a3b8;
+    font-weight: 600;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 6px;
+  }
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 12px 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #cbd5e1;
+  }
+  .menu-item:hover {
+    background-color: #334155;
+  }
+  .menu-item span:first-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .menu-item .material-icons {
+    font-size: 20px;
+    color: #94a3b8;
+    transition: transform 0.3s ease;
+  }
+  .menu-item[aria-expanded="true"] .material-icons {
+    transform: rotate(180deg);
+  }
+  ul.submenu {
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding-left: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  ul.submenu.open {
+    max-height: 800px;
+  }
+  ul.submenu li a {
+    display: block;
+    color: #cbd5e1;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
+  ul.submenu li a:hover {
+    background-color: #3b82f6;
+    color: white;
+  }
+  .catalog-section {
+    flex: 1;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .catalog-section h1 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #1d4ed8;
+  }
+  /* Card grid and card fix for equal heights */
+  .card-grid {
+    display: flex;
+    gap: 30px;
+    height: 100%; /* fill container height */
+  }
+  .card {
+    background: linear-gradient(to bottom right, #ffffff, #f8fafc);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1; /* equal width and grow */
+    height: 100%; /* fill the flex container height */
+    min-height: 350px; /* fallback minimum height */
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.1);
+  }
+  .card h3 {
+    font-size: 20px;
+    color: #1d4ed8;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .card p {
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+  .card iframe {
+    border-radius: 8px;
+  }
+  footer {
+    text-align: center;
+    padding: 18px 30px;
+    background-color: #f3f4f6;
+    font-size: 14px;
+    color: #64748b;
+    margin-top: 30px;
+    border-radius: 0 0 16px 16px;
+  }
+  @media (max-width: 1024px) {
+    .card-grid {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+  @media (max-width: 768px) {
+    .main-layout {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+    }
+    .sidebar {
+      position: relative;
+      width: 100%;
+      height: auto;
+      max-height: none;
+      border-radius: 0 0 16px 16px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+    }
+    .back-link {
+      position: static;
+      margin-bottom: 20px;
+    }
+    .catalog-section {
+      padding: 30px 20px;
+      border-radius: 0 0 16px 16px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>DataCraft by Raheleh</h1>
+  <p>A portfolio of data analytics & engineering scenarios</p>
+</header>
+
+<a class="back-link" href="index.html" title="Back to Home Page">
+  <span class="material-icons">arrow_back</span> Back to Home Page
+</a>
+
+<div class="main-layout">
+  <aside class="sidebar">
+    <h2>Topics</h2>
+    <div class="menu-item" onclick="toggleDropdown()" aria-expanded="false" tabindex="0">
+      <span><span class="material-icons">folder</span> About Me</span>
+      <span class="material-icons">expand_more</span>
+    </div>
+    <ul class="submenu" id="acMenu">
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+      <li><a href="#">Link 4</a></li>
+      <li><a href="#">Link 5</a></li>
+      <li><a href="#">Link 6</a></li>
+      <li><a href="#">Link 7</a></li>
+      <li><a href="#">Link 8</a></li>
+    </ul>
+  </aside>
+
+  <section class="catalog-section">
+    <h1>Aggregation Functions</h1>
+    <div class="card-grid">
+      <div class="card">
+        <h3>AVERAGE/AVERAGEA/AVERAGEX Function</h3>
+        <p>Calculates averages: AVERAGE for numbers only, AVERAGEA includes all values, and AVERAGEX averages an expression over a table.</p>
+        <iframe width="100%" height="315" src="" frameborder="0" allowfullscreen title="YouTube video player"></iframe>
+      </div>
+      <div class="card">
+        <h3>COUNT/COUNTA/COUNTX/COUNTBLANK/COUNTROWS Function</h3>
+        <p>Counts values: COUNT counts numbers, COUNTA counts all non-blanks, COUNTX counts expression results, COUNTBLANK counts blanks, and COUNTROWS counts table rows.</p>
+        <iframe width="100%" height="315" src="" frameborder="0" allowfullscreen title="YouTube video player"></iframe>
+      </div>
+      <div class="card">
+        <h3>DISTINCTCOUNT/DISTINCTCOUNTNOBLANK Function</h3>
+        <p>Counts unique values: DISTINCTCOUNT counts all distinct values, DISTINCTCOUNTNOBLANK excludes blanks.</p>
+        <iframe width="100%" height="315" src="" frameborder="0" allowfullscreen title="YouTube video player"></iframe>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  &copy; 2025 Raheleh's IT Learning. All rights reserved.
+</footer>
+
+<script>
+  function toggleDropdown() {
+    const menu = document.getElementById('acMenu');
+    const btn = document.querySelector('.menu-item');
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      menu.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  document.querySelector('.menu-item').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleDropdown();
+    }
+  });
+</script>
+
+</body>
+</html>
