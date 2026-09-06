@@ -9,7 +9,7 @@
 
   <!-- Google Fonts -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700&display=swap"
     rel="stylesheet"
   />
 
@@ -214,63 +214,205 @@
 
     /* =====================================================
        ABOUT ME SECTION
+       Redesigned section only
     ===================================================== */
 
     .about-me {
+      position: relative;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #f8fbff 55%,
+          #f2f7ff 100%
+        );
+
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+
+      padding: 34px 40px 30px;
+
+      color: #1f2937;
+
+      box-shadow:
+        0 8px 28px rgba(15, 23, 42, 0.07);
+
+      margin-bottom: 40px;
+
+      overflow: hidden;
+    }
+
+
+    /* Small blue accent at the top */
+
+    .about-me::before {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      left: 40px;
+
+      width: 58px;
+      height: 4px;
+
       background: linear-gradient(
-        135deg,
+        90deg,
         #3b82f6,
         #2563eb
       );
 
-      border-radius: 16px;
-
-      /* Reduced vertical padding = shorter blue box */
-      padding: 24px 36px;
-
-      color: white;
-
-      box-shadow:
-        0 10px 25px rgba(59, 130, 246, 0.4);
-
-      margin-bottom: 40px;
-
-      font-size: 16px;
+      border-radius: 0 0 5px 5px;
     }
+
+
+    /* Very subtle decorative glow */
+
+    .about-me::after {
+      content: "";
+
+      position: absolute;
+
+      width: 220px;
+      height: 220px;
+
+      right: -90px;
+      top: -110px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(59, 130, 246, 0.10),
+          rgba(59, 130, 246, 0)
+        );
+
+      pointer-events: none;
+    }
+
+
+    /* Small HELLO label */
+
+    .about-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      margin-bottom: 14px;
+
+      font-family: 'Poppins', sans-serif;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      letter-spacing: 1.6px;
+
+      text-transform: uppercase;
+
+      color: #2563eb;
+    }
+
+
+    /* Blue dot beside HELLO */
+
+    .about-label::before {
+      content: "";
+
+      width: 7px;
+      height: 7px;
+
+      background: #2563eb;
+
+      border-radius: 50%;
+    }
+
+
+    /* Main name line */
 
     .about-me h2 {
+      margin: 0 0 6px;
+
+      font-family: 'Poppins', sans-serif;
+
+      font-size: 27px;
       font-weight: 700;
-      font-size: 28px;
 
-      margin-top: 0;
-      margin-bottom: 18px;
+      line-height: 1.3;
 
-      text-align: center;
+      color: #0f172a;
 
-      text-shadow:
-        0 1px 4px rgba(0, 0, 0, 0.2);
+      text-align: left;
+
+      text-shadow: none;
     }
 
-    /*
-       Wider text area creates longer lines
-       and therefore fewer total lines.
-    */
 
-    .about-me p {
-      max-width: 1300px;
+    /* Data Engineering / Analytics sentence */
 
-      margin:
-        0 auto 10px auto;
+    .about-role {
+      margin: 0 0 18px !important;
 
-      font-weight: 400;
+      font-size: 16px;
 
-      line-height: 1.45;
+      font-weight: 600 !important;
+
+      color: #2563eb;
+
+      line-height: 1.6 !important;
+    }
+
+
+    /* Main description */
+
+    .about-description {
+      position: relative;
+
+      max-width: 1150px !important;
+
+      margin: 0 !important;
+
+      font-size: 15px;
+
+      font-weight: 400 !important;
+
+      line-height: 1.75 !important;
+
+      color: #64748b;
 
       text-align: left;
     }
 
-    .about-me p:last-child {
-      margin-bottom: 0;
+
+    /* Small skill tags */
+
+    .about-tags {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin-top: 22px;
+    }
+
+    .about-tag {
+      display: inline-flex;
+      align-items: center;
+
+      padding: 6px 11px;
+
+      border-radius: 6px;
+
+      background: #eff6ff;
+
+      border: 1px solid #dbeafe;
+
+      color: #1d4ed8;
+
+      font-size: 12px;
+      font-weight: 600;
     }
 
 
@@ -456,11 +598,23 @@
       }
 
       .about-me {
-        padding: 24px;
+        padding: 30px 24px 26px;
       }
 
-      .about-me p {
-        max-width: 100%;
+      .about-me::before {
+        left: 24px;
+      }
+
+      .about-me h2 {
+        font-size: 23px;
+      }
+
+      .about-description {
+        max-width: 100% !important;
+      }
+
+      .about-tags {
+        gap: 7px;
       }
     }
 
@@ -562,25 +716,37 @@
 
       <!-- ===============================================
            ABOUT ME
+           Redesigned appearance
       ================================================ -->
 
       <section class="about-me">
 
-       
+        <div class="about-label">
+          Hello
+        </div>
 
-
-        <p>
+        <h2>
           Hi, I'm Raheleh.
-I work across data engineering and data analytics.
-         
+        </h2>
+
+        <p class="about-role">
+          I work across data engineering and data analytics.
         </p>
 
-
-        <p>
-          This website is my personal learning journey, where I explore, experiment, and share what I'm learning
-          and working on in the world of data. Whether it's analyzing trends, building models, or designing data pipelines,
-          I'm always excited to dive deeper and grow in this ever-evolving field. Feel free to explore and connect!
+        <p class="about-description">
+          This website is my personal learning journey, where I explore,
+          experiment, and share what I'm learning and working on in the
+          world of data. Whether it's analyzing trends, building models,
+          or designing data pipelines, I'm always excited to dive deeper
+          and grow in this ever-evolving field. Feel free to explore and
+          connect!
         </p>
+
+        <div class="about-tags">
+          <span class="about-tag">Data Engineering</span>
+          <span class="about-tag">Data Analytics</span>
+          <span class="about-tag">Data Pipelines</span>
+        </div>
 
       </section>
 
