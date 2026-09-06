@@ -8,19 +8,13 @@
 
   <title>About Me | DataCraft by Raheleh</title>
 
-  <!-- =====================================================
-       GOOGLE FONTS
-  ====================================================== -->
-
+  <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700&display=swap"
     rel="stylesheet"
   />
 
-  <!-- =====================================================
-       GOOGLE MATERIAL ICONS
-  ====================================================== -->
-
+  <!-- Google Material Icons -->
   <link
     href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet"
@@ -30,8 +24,8 @@
   <style>
 
     /* =====================================================
-       GENERAL PAGE SETTINGS
-    ====================================================== */
+       GENERAL
+    ===================================================== */
 
     * {
       box-sizing: border-box;
@@ -55,52 +49,39 @@
 
     /* =====================================================
        HEADER
-    ====================================================== */
+    ===================================================== */
 
     header {
       position: relative;
-
       background-color: #0f172a;
       color: white;
-
       padding: 28px 30px 24px;
-
       text-align: center;
-
       font-family: 'Poppins', sans-serif;
-
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
 
     header h1 {
       margin: 0;
-
       font-size: 34px;
       font-weight: 700;
-
       letter-spacing: 1px;
-
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.15);
     }
 
     header p {
       margin: 8px 0 0;
-
       font-size: 16px;
-
       font-style: italic;
-
       color: #cbd5e1;
     }
 
 
     /* =====================================================
-       BACK TO HOME BUTTON
-    ====================================================== */
+       HOME BUTTON
+    ===================================================== */
 
     .home-button {
       position: absolute;
-
       top: 28px;
       right: 30px;
 
@@ -112,7 +93,6 @@
       color: #0369a1;
 
       padding: 12px 20px;
-
       border-radius: 28px;
 
       font-weight: 600;
@@ -127,7 +107,6 @@
 
     .home-button:hover {
       transform: translateY(-2px);
-
       box-shadow: 0 8px 22px rgba(3, 105, 161, 0.35);
     }
 
@@ -137,29 +116,25 @@
 
 
     /* =====================================================
-       PAGE CONTAINER
-    ====================================================== */
+       PAGE LAYOUT
+    ===================================================== */
 
     .container {
       display: flex;
-
-      min-height: calc(100vh - 120px);
-
       width: 100%;
+      min-height: calc(100vh - 120px);
     }
 
 
     /* =====================================================
        SIDEBAR
-    ====================================================== */
+    ===================================================== */
 
     .sidebar {
       width: 260px;
-
       flex-shrink: 0;
 
       background-color: #1e293b;
-
       padding: 38px 20px;
 
       color: #cbd5e1;
@@ -169,9 +144,7 @@
 
     .sidebar h2 {
       font-size: 16px;
-
       text-transform: uppercase;
-
       letter-spacing: 0.7px;
 
       color: #94a3b8;
@@ -184,23 +157,15 @@
       margin-bottom: 16px;
     }
 
-
-    /* =====================================================
-       SIDEBAR MENU
-    ====================================================== */
-
     .menu-item {
       display: flex;
-
       justify-content: space-between;
       align-items: center;
 
       padding: 12px 10px;
-
       border-radius: 8px;
 
       color: #cbd5e1;
-
       font-weight: 600;
 
       transition:
@@ -212,7 +177,6 @@
     .menu-item:hover,
     .menu-item.active {
       background-color: #334155;
-
       color: white;
     }
 
@@ -222,15 +186,12 @@
 
     .menu-left {
       display: flex;
-
       align-items: center;
-
       gap: 8px;
     }
 
     .menu-item .material-icons {
       color: #94a3b8;
-
       font-size: 20px;
     }
 
@@ -242,7 +203,7 @@
 
     /* =====================================================
        MAIN CONTENT
-    ====================================================== */
+    ===================================================== */
 
     main.content {
       flex: 1;
@@ -261,7 +222,6 @@
       font-family: 'Poppins', sans-serif;
 
       font-size: 32px;
-
       font-weight: 700;
 
       color: #1e293b;
@@ -270,7 +230,7 @@
 
     /* =====================================================
        PROFESSIONAL PROFILE
-    ====================================================== */
+    ===================================================== */
 
     .profile-card {
       background:
@@ -294,7 +254,6 @@
 
     .profile-card h2 {
       margin-top: 0;
-
       margin-bottom: 18px;
 
       font-family: 'Poppins', sans-serif;
@@ -306,7 +265,6 @@
 
     .profile-card p {
       font-size: 16px;
-
       line-height: 1.8;
 
       color: #475569;
@@ -320,8 +278,8 @@
 
 
     /* =====================================================
-       GENERAL ABOUT SECTIONS
-    ====================================================== */
+       GENERAL SECTIONS
+    ===================================================== */
 
     .about-section {
       margin-bottom: 42px;
@@ -335,7 +293,6 @@
       color: #1e3a5f;
 
       margin-top: 0;
-
       margin-bottom: 22px;
 
       padding-bottom: 8px;
@@ -345,14 +302,12 @@
 
 
     /* =====================================================
-       CORE TECHNOLOGIES
-    ====================================================== */
+       TECHNOLOGIES
+    ===================================================== */
 
     .skill-tags {
       display: flex;
-
       flex-wrap: wrap;
-
       gap: 12px;
     }
 
@@ -368,7 +323,6 @@
       border-radius: 20px;
 
       font-size: 14px;
-
       font-weight: 600;
 
       transition:
@@ -378,20 +332,17 @@
 
     .skill-tags span:hover {
       transform: translateY(-2px);
-
       background-color: #dbeafe;
     }
 
 
     /* =====================================================
-       ACADEMIC QUALIFICATIONS
-    ====================================================== */
+       QUALIFICATIONS
+    ===================================================== */
 
     .qualification {
       display: flex;
-
       justify-content: space-between;
-
       align-items: center;
 
       background: #f8fafc;
@@ -424,14 +375,13 @@
 
     .qualification .institution {
       font-weight: 600;
-
       color: #2563eb;
     }
 
 
     /* =====================================================
-       CERTIFICATIONS GRID
-    ====================================================== */
+       CERTIFICATIONS
+    ===================================================== */
 
     .cert-grid {
       display: grid;
@@ -441,11 +391,6 @@
 
       gap: 20px;
     }
-
-
-    /* =====================================================
-       CERTIFICATION CARD
-    ====================================================== */
 
     .cert-card {
       display: flex;
@@ -477,7 +422,6 @@
 
     .cert-card > .material-icons {
       font-size: 30px;
-
       color: #2563eb;
     }
 
@@ -499,11 +443,6 @@
       font-size: 14px;
     }
 
-
-    /* =====================================================
-       CREDENTIAL BUTTON
-    ====================================================== */
-
     .cert-card a {
       display: inline-block;
 
@@ -516,7 +455,6 @@
       border-radius: 8px;
 
       font-size: 13px;
-
       font-weight: 600;
 
       box-shadow:
@@ -537,7 +475,7 @@
 
     /* =====================================================
        FOOTER
-    ====================================================== */
+    ===================================================== */
 
     footer {
       text-align: center;
@@ -553,8 +491,8 @@
 
 
     /* =====================================================
-       RESPONSIVE DESIGN
-    ====================================================== */
+       RESPONSIVE
+    ===================================================== */
 
     @media (max-width: 900px) {
 
@@ -564,7 +502,6 @@
 
       .home-button {
         top: 20px;
-
         right: 20px;
       }
 
@@ -574,7 +511,6 @@
 
       .sidebar {
         width: 100%;
-
         padding: 18px 20px;
       }
 
@@ -584,9 +520,7 @@
 
       .qualification {
         flex-direction: column;
-
         align-items: flex-start;
-
         gap: 8px;
       }
 
@@ -595,7 +529,6 @@
       }
 
     }
-
 
     @media (max-width: 600px) {
 
@@ -627,7 +560,7 @@
 
   <!-- =====================================================
        HEADER
-  ====================================================== -->
+  ===================================================== -->
 
   <header>
 
@@ -638,9 +571,6 @@
     <p>
       A portfolio of data analytics &amp; engineering scenarios
     </p>
-
-
-    <!-- BACK TO HOME -->
 
     <a
       class="home-button"
@@ -661,7 +591,7 @@
 
   <!-- =====================================================
        PAGE CONTAINER
-  ====================================================== -->
+  ===================================================== -->
 
   <div class="container">
 
@@ -675,9 +605,6 @@
       <h2>
         Topics
       </h2>
-
-
-      <!-- ABOUT ME -->
 
       <a
         href="about.html"
@@ -694,13 +621,11 @@
 
         </span>
 
-
         <span class="material-icons">
           chevron_right
         </span>
 
       </a>
-
 
     </aside>
 
@@ -711,9 +636,6 @@
     ==================================================== -->
 
     <main class="content">
-
-
-      <!-- PAGE TITLE -->
 
       <h1 class="page-title">
         About Me
@@ -731,21 +653,18 @@
           Professional Profile
         </h2>
 
-
         <p>
-          Certified Azure Data Engineer and Microsoft Certified Fabric
-          Analytics Engineer with experience designing, developing, and
-          supporting data platforms using Microsoft Fabric, Azure Data Factory,
-          Azure Synapse Analytics, SQL/T-SQL, Spark, and Power BI.
+          Certified Azure Data Engineer and Microsoft Certified Fabric Analytics
+          Engineer with experience designing, developing, and supporting data
+          platforms using Microsoft Fabric, Azure Data Factory, Azure Synapse
+          Analytics, SQL/T-SQL, Spark, and Power BI.
         </p>
-
 
         <p>
           Skilled in building end-to-end data engineering solutions including
           data ingestion, ETL/ELT pipelines, data warehousing, Lakehouse
           architecture, data modelling, and performance optimization.
         </p>
-
 
         <p>
           Proven ability to transform complex data sources into scalable,
@@ -767,31 +686,19 @@
           Core Technologies
         </h2>
 
-
         <div class="skill-tags">
 
           <span>Microsoft Fabric</span>
-
           <span>Azure Data Factory</span>
-
           <span>Azure Synapse Analytics</span>
-
           <span>SQL / T-SQL</span>
-
           <span>Python</span>
-
           <span>PySpark</span>
-
           <span>Power BI</span>
-
           <span>DAX</span>
-
           <span>ETL / ELT</span>
-
           <span>Data Warehousing</span>
-
           <span>Lakehouse Architecture</span>
-
           <span>Data Modelling</span>
 
         </div>
@@ -811,8 +718,6 @@
         </h2>
 
 
-        <!-- MASTER DEGREE -->
-
         <div class="qualification">
 
           <div>
@@ -827,16 +732,12 @@
 
           </div>
 
-
           <span class="institution">
             UNSW
           </span>
 
         </div>
 
-
-
-        <!-- BACHELOR DEGREE -->
 
         <div class="qualification">
 
@@ -851,7 +752,6 @@
             </p>
 
           </div>
-
 
           <span class="institution">
             Science and Culture University
@@ -877,16 +777,13 @@
         <div class="cert-grid">
 
 
-          <!-- =============================================
-               FABRIC ANALYTICS ENGINEER
-          ============================================== -->
+          <!-- FABRIC ANALYTICS ENGINEER -->
 
           <div class="cert-card">
 
             <span class="material-icons">
               verified
             </span>
-
 
             <div>
 
@@ -897,7 +794,6 @@
               <p>
                 Microsoft · 2026
               </p>
-
 
               <a
                 href="https://learn.microsoft.com/api/credentials/share/en-gb/RahelehDalvand-3022/8B2163292B53F226?sharingId=4C4172E6F6C74591"
@@ -913,16 +809,13 @@
 
 
 
-          <!-- =============================================
-               ADOBE CAMPAIGN
-          ============================================== -->
+          <!-- ADOBE CAMPAIGN -->
 
           <div class="cert-card">
 
             <span class="material-icons">
               verified
             </span>
-
 
             <div>
 
@@ -933,7 +826,6 @@
               <p>
                 Adobe · 2025
               </p>
-
 
               <a
                 href="https://certification.adobe.com/credential/verify/dcac6da9-cffa-11ef-8f8b-42010a40001c"
@@ -949,16 +841,13 @@
 
 
 
-          <!-- =============================================
-               POSTGRESQL
-          ============================================== -->
+          <!-- POSTGRESQL -->
 
           <div class="cert-card">
 
             <span class="material-icons">
               verified
             </span>
-
 
             <div>
 
@@ -967,9 +856,8 @@
               </h3>
 
               <p>
-                2025
+                Credly · 2025
               </p>
-
 
               <a
                 href="https://www.credly.com/badges/e295a437-1c91-48ca-86fb-5cd7da8ffb75/linked_in_profile"
@@ -985,16 +873,13 @@
 
 
 
-          <!-- =============================================
-               AZURE DATA ENGINEER
-          ============================================== -->
+          <!-- AZURE DATA ENGINEER -->
 
           <div class="cert-card">
 
             <span class="material-icons">
               verified
             </span>
-
 
             <div>
 
@@ -1005,7 +890,6 @@
               <p>
                 Microsoft · 2024
               </p>
-
 
               <a
                 href="https://learn.microsoft.com/api/credentials/share/en-us/RahelehDalvand-3022/D35B25B2879D11FD?sharingId"
@@ -1021,16 +905,13 @@
 
 
 
-          <!-- =============================================
-               POWER BI DATA ANALYST
-          ============================================== -->
+          <!-- POWER BI DATA ANALYST -->
 
           <div class="cert-card">
 
             <span class="material-icons">
               verified
             </span>
-
 
             <div>
 
@@ -1041,7 +922,6 @@
               <p>
                 Microsoft · 2024
               </p>
-
 
               <a
                 href="https://learn.microsoft.com/api/credentials/share/en-us/RahelehDalvand-3022/B60347E3CF8246B6?sharingId"
@@ -1069,12 +949,10 @@
 
   <!-- =====================================================
        FOOTER
-  ====================================================== -->
+  ===================================================== -->
 
   <footer>
-
     &copy; 2026 Raheleh — All rights reserved
-
   </footer>
 
 
