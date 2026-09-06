@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -8,12 +9,14 @@
   <title>DataCraft by Raheleh</title>
 
   <!-- Google Fonts -->
+
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600;700&display=swap"
     rel="stylesheet"
   />
 
   <!-- Google Material Icons -->
+
   <link
     href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet"
@@ -149,7 +152,6 @@
       z-index: 1;
     }
 
-
     .sidebar h2 {
       font-size: 16px;
       text-transform: uppercase;
@@ -193,13 +195,11 @@
         transform 0.2s ease;
     }
 
-
     .menu-item:hover {
       background-color: #334155;
       color: white;
       transform: translateX(3px);
     }
-
 
     .menu-item .menu-left {
       display: flex;
@@ -207,12 +207,10 @@
       gap: 8px;
     }
 
-
     .menu-item .material-icons {
       font-size: 20px;
       color: #94a3b8;
     }
-
 
     .menu-item:hover .material-icons {
       color: white;
@@ -271,7 +269,6 @@
       line-height: 1.6;
     }
 
-
     .about-me h2 {
       font-weight: 700;
 
@@ -284,7 +281,6 @@
 
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     }
-
 
     .about-me p {
       max-width: 900px;
@@ -338,14 +334,12 @@
       justify-content: space-between;
     }
 
-
     .card:hover {
       transform: translateY(-6px);
 
       box-shadow:
         0 14px 40px rgba(0, 0, 0, 0.1);
     }
-
 
     .card h3 {
       font-size: 20px;
@@ -356,7 +350,6 @@
 
       font-weight: 700;
     }
-
 
     .card p {
       font-size: 14px;
@@ -398,7 +391,6 @@
         box-shadow 0.3s ease;
     }
 
-
     .card a:hover {
       background-color: #2563eb;
 
@@ -433,7 +425,6 @@
       width: 8px;
     }
 
-
     .sidebar::-webkit-scrollbar-thumb,
     main.content::-webkit-scrollbar-thumb {
       background-color:
@@ -454,13 +445,11 @@
         overflow: auto;
       }
 
-
       .container {
         flex-direction: column;
 
         height: auto;
       }
-
 
       .sidebar {
         width: 100%;
@@ -474,18 +463,15 @@
         margin-bottom: 24px;
       }
 
-
       main.content {
         padding: 30px 20px;
 
         border-radius: 0 0 16px 16px;
       }
 
-
       .dashboard-grid {
         grid-template-columns: 1fr;
       }
-
 
       .home-badge {
         position: static;
@@ -502,9 +488,7 @@
 
 </head>
 
-
 <body>
-
 
   <!-- =====================================================
        HEADER
@@ -512,15 +496,15 @@
 
   <header>
 
-    <h1>DataCraft by Raheleh</h1>
+```
+<h1>DataCraft by Raheleh</h1>
 
-    <p>
-      Curated learning &amp; project examples
-    </p>
+<p>
+  Curated learning &amp; project examples
+</p>
+```
 
   </header>
-
-
 
   <!-- =====================================================
        HOME PAGE INDICATOR
@@ -528,15 +512,15 @@
 
   <div class="home-badge">
 
-    <span class="material-icons">
-      home
-    </span>
+```
+<span class="material-icons">
+  home
+</span>
 
-    You are on the Home Page
+You are on the Home Page
+```
 
   </div>
-
-
 
   <!-- =====================================================
        PAGE CONTAINER
@@ -544,253 +528,251 @@
 
   <div class="container">
 
+```
+<!-- ===================================================
+     SIDEBAR
+==================================================== -->
 
-    <!-- ===================================================
-         SIDEBAR
-    ==================================================== -->
+<aside class="sidebar">
 
-    <aside class="sidebar">
-
-      <h2>Topics</h2>
-
-
-      <!-- ABOUT ME LINK -->
-
-      <a
-        href="about.html"
-        class="menu-item"
-      >
-
-        <span class="menu-left">
-
-          <span class="material-icons">
-            person
-          </span>
-
-          About Me
-
-        </span>
+  <h2>Topics</h2>
 
 
-        <span class="material-icons">
-          chevron_right
-        </span>
+  <!-- ABOUT ME LINK -->
 
+  <a
+    href="about.html"
+    class="menu-item"
+  >
+
+    <span class="menu-left">
+
+      <span class="material-icons">
+        person
+      </span>
+
+      About Me
+
+    </span>
+
+
+    <span class="material-icons">
+      chevron_right
+    </span>
+
+  </a>
+
+
+</aside>
+
+
+
+<!-- ===================================================
+     MAIN CONTENT
+==================================================== -->
+
+<main class="content">
+
+
+  <!-- ===============================================
+       ABOUT THIS WEBSITE
+  ================================================ -->
+
+  <section class="about-me">
+
+    <h2>
+      About This Website
+    </h2>
+
+
+    <p>
+
+      Hi! I'm Raheleh, passionate about all things data —
+      from data analytics to data science and data engineering.
+
+      This website is my personal learning journey where I
+      explore, experiment, and share everything I'm learning
+      about working with data.
+
+      Whether it's analyzing trends, building models, or
+      designing data pipelines, I'm always excited to dive
+      deeper and grow in this ever-evolving field.
+
+      Feel free to explore and connect!
+
+    </p>
+
+  </section>
+
+
+
+  <!-- ===============================================
+       PROJECT CARDS
+  ================================================ -->
+
+  <section class="dashboard-grid">
+
+
+    <!-- POWER BI -->
+
+    <article class="card">
+
+      <h3>
+        Power BI
+      </h3>
+
+      <p>
+        Learn how to transform your data into insights
+        using interactive dashboards and reports with
+        Power BI.
+      </p>
+
+      <a href="powerbi.html">
+        View Full Catalog
       </a>
 
+    </article>
 
-    </aside>
 
 
+    <!-- MACHINE LEARNING -->
 
-    <!-- ===================================================
-         MAIN CONTENT
-    ==================================================== -->
+    <article class="card">
 
-    <main class="content">
+      <h3>
+        Python Predictive Analytics Project
+        <br>
+        Using Python
+      </h3>
 
+      <p>
+        Develop a complete Python Predictive Analytics project in
+        Python, from data handling to model deployment.
+      </p>
 
-      <!-- ===============================================
-           ABOUT THIS WEBSITE
-      ================================================ -->
+      <a href="ML.html">
+        View Full Catalog
+      </a>
 
-      <section class="about-me">
+    </article>
 
-        <h2>
-          About This Website
-        </h2>
 
 
-        <p>
+    <!-- PYTHON DATA ANALYTICS -->
 
-          Hi! I'm Raheleh, passionate about all things data —
-          from data analytics to data science and data engineering.
+    <article class="card">
 
-          This website is my personal learning journey where I
-          explore, experiment, and share everything I'm learning
-          about working with data.
+      <h3>
+        Python for Data Analytics
+      </h3>
 
-          Whether it's analyzing trends, building models, or
-          designing data pipelines, I'm always excited to dive
-          deeper and grow in this ever-evolving field.
+      <p>
+        Master Python basics and libraries like pandas,
+        NumPy, and Matplotlib to analyze and visualize data.
+      </p>
 
-          Feel free to explore and connect!
+      <a href="PythonDataAnalyticVersion.html">
+        View Full Catalog
+      </a>
 
-        </p>
+    </article>
 
-      </section>
 
 
+    <!-- PYTHON DATA SCIENCE -->
 
-      <!-- ===============================================
-           PROJECT CARDS
-      ================================================ -->
+    <article class="card">
 
-      <section class="dashboard-grid">
+      <h3>
+        Python for Data Science
+      </h3>
 
+      <p>
+        Learn core data science skills with Python:
+        preprocessing, modeling, and evaluation.
+      </p>
 
-        <!-- POWER BI -->
+      <a href="PythonDataScience.html">
+        View Full Catalog
+      </a>
 
-        <article class="card">
+    </article>
 
-          <h3>
-            Power BI
-          </h3>
 
-          <p>
-            Learn how to transform your data into insights
-            using interactive dashboards and reports with
-            Power BI.
-          </p>
 
-          <a href="powerbi.html">
-            View Full Catalog
-          </a>
+    <!-- SQL SERVER -->
 
-        </article>
+    <article class="card">
 
+      <h3>
+        SQL Server
+      </h3>
 
+      <p>
+        Master SQL for querying, transforming, and managing
+        data across analytics and engineering tasks.
+      </p>
 
-        <!-- MACHINE LEARNING -->
+      <a href="#">
+        View Full Catalog
+      </a>
 
-        <article class="card">
+    </article>
 
-          <h3>
-            Python Predictive Analytics Project
-            <br>
-            Using Python
-          </h3>
 
-          <p>
-            Develop a complete Python Predictive Analytics project in
-            Python, from data handling to model deployment.
-          </p>
 
-          <a href="ML.html">
-            View Full Catalog
-          </a>
+    <!-- AZURE DATA FACTORY -->
 
-        </article>
+    <article class="card">
 
+      <h3>
+        Azure Data Factory
+        <br>
+        (Data Engineering)
+      </h3>
 
+      <p>
+        Build and manage data pipelines in the cloud
+        with Azure Data Factory.
+      </p>
 
-        <!-- PYTHON DATA ANALYTICS -->
+      <a href="AzureDataFactory.html">
+        View Full Catalog
+      </a>
 
-        <article class="card">
+    </article>
 
-          <h3>
-            Python for Data Analytics
-          </h3>
 
-          <p>
-            Master Python basics and libraries like pandas,
-            NumPy, and Matplotlib to analyze and visualize data.
-          </p>
 
-          <a href="PythonDataAnalyticVersion.html">
-            View Full Catalog
-          </a>
+    <!-- ADOBE CAMPAIGN -->
 
-        </article>
+    <article class="card">
 
+      <h3>
+        Adobe Campaign Classic
+        <br>
+        (Data Engineering)
+      </h3>
 
+      <p>
+        A growing collection of practical notes in
+        Adobe Campaign Classic, focused on ETL workflows.
+      </p>
 
-        <!-- PYTHON DATA SCIENCE -->
+      <a href="AdobeVersion.html">
+        View Full Catalog
+      </a>
 
-        <article class="card">
+    </article>
 
-          <h3>
-            Python for Data Science
-          </h3>
 
-          <p>
-            Learn core data science skills with Python:
-            preprocessing, modeling, and evaluation.
-          </p>
+  </section>
 
-          <a href="PythonDataScience.html">
-            View Full Catalog
-          </a>
 
-        </article>
-
-
-
-        <!-- SQL SERVER -->
-
-        <article class="card">
-
-          <h3>
-            SQL Server
-          </h3>
-
-          <p>
-            Master SQL for querying, transforming, and managing
-            data across analytics and engineering tasks.
-          </p>
-
-          <a href="#">
-            View Full Catalog
-          </a>
-
-        </article>
-
-
-
-        <!-- AZURE DATA FACTORY -->
-
-        <article class="card">
-
-          <h3>
-            Azure Data Factory
-            <br>
-            (Data Engineering)
-          </h3>
-
-          <p>
-            Build and manage data pipelines in the cloud
-            with Azure Data Factory.
-          </p>
-
-          <a href="#">
-            View Full Catalog
-          </a>
-
-        </article>
-
-
-
-        <!-- ADOBE CAMPAIGN -->
-
-        <article class="card">
-
-          <h3>
-            Adobe Campaign Classic
-            <br>
-            (Data Engineering)
-          </h3>
-
-          <p>
-            A growing collection of practical notes in
-            Adobe Campaign Classic, focused on ETL workflows.
-          </p>
-
-          <a href="AdobeVersion.html">
-            View Full Catalog
-          </a>
-
-        </article>
-
-
-      </section>
-
-
-    </main>
-
+</main>
+```
 
   </div>
-
-
 
   <!-- =====================================================
        FOOTER
@@ -798,10 +780,11 @@
 
   <footer>
 
-    &copy; 2026 Raheleh — All rights reserved
+```
+&copy; 2026 Raheleh — All rights reserved
+```
 
   </footer>
-
 
 </body>
 
