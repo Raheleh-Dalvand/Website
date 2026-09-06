@@ -7,23 +7,17 @@
 
   <title>DataCraft by Raheleh</title>
 
-  <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600;700&display=swap"
     rel="stylesheet"
   />
 
-  <!-- Google Material Icons -->
   <link
     href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet"
   />
 
   <style>
-
-    /* =====================================================
-       GENERAL PAGE SETTINGS
-    ===================================================== */
 
     * {
       box-sizing: border-box;
@@ -46,42 +40,31 @@
     }
 
 
-    /* =====================================================
-       HEADER
-    ===================================================== */
+    /* HEADER */
 
     header {
       background-color: #0f172a;
       color: white;
       padding: 20px 30px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      user-select: none;
       text-align: center;
       font-family: 'Poppins', sans-serif;
-      font-weight: 600;
     }
 
     header h1 {
       margin: 0;
       font-size: 32px;
       font-weight: 700;
-      letter-spacing: 1.2px;
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
     }
 
     header p {
       margin: 6px 0 0;
       font-size: 16px;
       color: #cbd5e1;
-      font-weight: 400;
       font-style: italic;
-      letter-spacing: 0.5px;
     }
 
 
-    /* =====================================================
-       HOME PAGE BADGE
-    ===================================================== */
+    /* HOME BADGE */
 
     .home-badge {
       position: fixed;
@@ -93,128 +76,64 @@
       font-size: 14px;
       padding: 10px 18px;
       border-radius: 24px;
-      box-shadow: 0 4px 12px rgba(3, 105, 161, 0.3);
       display: flex;
       align-items: center;
       gap: 6px;
-      user-select: none;
       z-index: 9999;
     }
 
-    .home-badge .material-icons {
-      font-size: 20px;
-      line-height: 1;
-    }
 
-
-    /* =====================================================
-       MAIN CONTAINER
-    ===================================================== */
+    /* LAYOUT */
 
     .container {
       display: flex;
       height: calc(100vh - 88px);
-      width: 100%;
-      background: transparent;
-      overflow: visible;
     }
 
 
-    /* =====================================================
-       SIDEBAR
-    ===================================================== */
+    /* SIDEBAR */
 
     .sidebar {
       width: 260px;
       background-color: #1e293b;
       padding: 30px 20px;
-      overflow-y: auto;
-      box-shadow: inset -1px 0 0 #334155;
       color: #cbd5e1;
-      user-select: none;
-      border-radius: 0;
-      z-index: 1;
     }
 
     .sidebar h2 {
       font-size: 16px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 10px;
       color: #94a3b8;
-      font-weight: 600;
       border-bottom: 1px solid #334155;
       padding-bottom: 6px;
     }
-
-
-    /* =====================================================
-       SIDEBAR MENU ITEM
-    ===================================================== */
 
     .menu-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      cursor: pointer;
       padding: 12px 10px;
       border-radius: 8px;
       font-weight: 600;
-      color: #cbd5e1;
-
-      transition:
-        background-color 0.25s ease,
-        color 0.25s ease,
-        transform 0.2s ease;
     }
 
     .menu-item:hover {
       background-color: #334155;
       color: white;
-      transform: translateX(3px);
-    }
-
-    .menu-item .menu-left {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .menu-item .material-icons {
-      font-size: 20px;
-      color: #94a3b8;
-    }
-
-    .menu-item:hover .material-icons {
-      color: white;
     }
 
 
-    /* =====================================================
-       MAIN CONTENT AREA
-    ===================================================== */
+    /* MAIN */
 
     main.content {
       flex: 1;
       padding: 50px;
       overflow-y: auto;
       background: white;
-
-      border-top-right-radius: 16px;
-      border-bottom-right-radius: 16px;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-
-      display: flex;
-      flex-direction: column;
     }
 
 
-    /* =====================================================
-       ABOUT ME SECTION
-    ===================================================== */
+    /* ABOUT ME */
 
     .about-me {
       background: linear-gradient(
@@ -229,28 +148,18 @@
       box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
       margin-bottom: 48px;
       font-size: 16px;
-      line-height: 1.6;
     }
 
     .about-me h2 {
-      font-weight: 700;
       font-size: 28px;
-      margin-top: 0;
-      margin-bottom: 24px;
+      margin: 0 0 22px;
       text-align: center;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     }
 
-    /*
-       Narrower text area for better readability.
-       This prevents very long lines across the blue box.
-    */
-
     .about-me p {
-      max-width: 720px;
-      margin: 0 auto 16px auto;
-      font-weight: 400;
-      line-height: 1.7;
+      max-width: 1050px;
+      margin: 0 auto 14px;
+      line-height: 1.55;
       text-align: left;
     }
 
@@ -259,23 +168,14 @@
     }
 
 
-    /* =====================================================
-       PROJECT CARD GRID
-    ===================================================== */
+    /* CARDS */
 
     .dashboard-grid {
       display: grid;
-
       grid-template-columns:
         repeat(auto-fill, minmax(300px, 1fr));
-
       gap: 30px;
     }
-
-
-    /* =====================================================
-       PROJECT CARDS
-    ===================================================== */
 
     .card {
       background: linear-gradient(
@@ -286,99 +186,48 @@
 
       border-radius: 16px;
       padding: 30px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      transition: 0.25s;
     }
 
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.1);
     }
 
     .card h3 {
       font-size: 20px;
       color: #1d4ed8;
-      margin-bottom: 10px;
-      font-weight: 700;
     }
 
     .card p {
-      font-size: 14px;
       color: #475569;
-      margin-bottom: 20px;
-      flex-grow: 1;
       line-height: 1.5;
+      flex-grow: 1;
     }
 
-
-    /* =====================================================
-       PROJECT BUTTONS
-    ===================================================== */
-
     .card a {
-      text-decoration: none;
       color: white;
       background-color: #1d4ed8;
       padding: 10px 16px;
       border-radius: 8px;
       font-weight: 600;
       text-align: center;
-
-      box-shadow:
-        0 6px 16px rgba(29, 78, 216, 0.6);
-
-      transition:
-        background-color 0.3s ease,
-        box-shadow 0.3s ease;
     }
 
-    .card a:hover {
-      background-color: #2563eb;
-
-      box-shadow:
-        0 8px 22px rgba(37, 99, 235, 0.8);
-    }
-
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
 
     footer {
       text-align: center;
-      padding: 18px 30px;
-      background-color: #f3f4f6;
-      font-size: 14px;
+      padding: 18px;
+      background: #f3f4f6;
       color: #64748b;
     }
 
-
-    /* =====================================================
-       SCROLLBAR
-    ===================================================== */
-
-    .sidebar::-webkit-scrollbar,
-    main.content::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    .sidebar::-webkit-scrollbar-thumb,
-    main.content::-webkit-scrollbar-thumb {
-      background-color: rgba(100, 116, 139, 0.5);
-      border-radius: 10px;
-    }
-
-
-    /* =====================================================
-       RESPONSIVE DESIGN
-    ===================================================== */
 
     @media (max-width: 768px) {
 
@@ -394,26 +243,14 @@
 
       .sidebar {
         width: 100%;
-        max-height: none;
-        border-radius: 0 0 16px 16px;
-        padding: 16px 20px;
-        margin-bottom: 24px;
       }
 
       main.content {
         padding: 30px 20px;
-        border-radius: 0 0 16px 16px;
       }
 
       .dashboard-grid {
         grid-template-columns: 1fr;
-      }
-
-      .home-badge {
-        position: static;
-        margin: 0 auto 30px;
-        width: fit-content;
-        box-shadow: none;
       }
 
       .about-me {
@@ -423,6 +260,7 @@
       .about-me p {
         max-width: 100%;
       }
+
     }
 
   </style>
@@ -433,366 +271,245 @@
 <body>
 
 
-  <!-- =====================================================
-       HEADER
-  ====================================================== -->
+<header>
 
-  <header>
+  <h1>DataCraft by Raheleh</h1>
 
-    <h1>
-      DataCraft by Raheleh
-    </h1>
+  <p>
+    Curated learning &amp; project examples
+  </p>
 
-    <p>
-      Curated learning &amp; project examples
-    </p>
-
-  </header>
+</header>
 
 
+<div class="home-badge">
 
-  <!-- =====================================================
-       HOME PAGE INDICATOR
-  ====================================================== -->
+  <span class="material-icons">
+    home
+  </span>
 
-  <div class="home-badge">
+  You are on the Home Page
 
-    <span class="material-icons">
-      home
-    </span>
-
-    You are on the Home Page
-
-  </div>
+</div>
 
 
-
-  <!-- =====================================================
-       PAGE CONTAINER
-  ====================================================== -->
-
-  <div class="container">
+<div class="container">
 
 
-    <!-- ===================================================
-         SIDEBAR
-    ==================================================== -->
+  <aside class="sidebar">
 
-    <aside class="sidebar">
+    <h2>Topics</h2>
 
-      <h2>
-        Topics
-      </h2>
+    <a href="about.html" class="menu-item">
 
-
-      <!-- ABOUT ME LINK -->
-
-      <a
-        href="about.html"
-        class="menu-item"
-      >
-
-        <span class="menu-left">
-
-          <span class="material-icons">
-            person
-          </span>
-
-          About Me
-
-        </span>
-
-
+      <span>
         <span class="material-icons">
-          chevron_right
+          person
         </span>
 
-      </a>
+        About Me
+      </span>
+
+      <span class="material-icons">
+        chevron_right
+      </span>
+
+    </a>
+
+  </aside>
 
 
-    </aside>
+  <main class="content">
 
 
+    <section class="about-me">
 
-    <!-- ===================================================
-         MAIN CONTENT
-    ==================================================== -->
+      <h2>About Me</h2>
 
-    <main class="content">
+      <p>
+        Hi! I'm Raheleh, passionate about all things data — from data engineering to data analytics.
+        My experience spans data engineering, data analytics, business intelligence, and cloud data platforms,
+        with a focus on designing end-to-end data solutions using Microsoft Fabric, Azure Data Factory,
+        Azure Synapse Analytics, SQL, Python, and Power BI.
+      </p>
 
+      <p>
+        I hold a Master’s Degree in Information Technology and a Bachelor’s Degree in Software Engineering,
+        complemented by Microsoft certifications in Azure Data Engineering, Power BI, and Fabric Analytics Engineering.
+      </p>
 
-      <!-- ===============================================
-           ABOUT ME
-      ================================================ -->
+      <p>
+        This website is my personal learning journey, where I explore, experiment, and share what I'm learning
+        and working on in the world of data. Whether it's analyzing trends, building models, or designing data pipelines,
+        I'm always excited to dive deeper and grow in this ever-evolving field. Feel free to explore and connect!
+      </p>
 
-      <section class="about-me">
-
-        <h2>
-          About Me
-        </h2>
-
-
-        <p>
-          Hi! I'm Raheleh, passionate about all things data —
-          from data engineering to data analytics.
-        </p>
-
-
-        <p>
-          My experience spans data engineering, data analytics,
-          business intelligence, and cloud data platforms, with a
-          focus on designing end-to-end data solutions using
-          Microsoft Fabric, Azure Data Factory, Azure Synapse
-          Analytics, SQL, Python, and Power BI.
-        </p>
+    </section>
 
 
-        <p>
-          I hold a Master’s Degree in Information Technology
-          and a Bachelor’s Degree in Software Engineering,
-          complemented by Microsoft certifications in Azure
-          Data Engineering, Power BI, and Fabric Analytics Engineering.
-        </p>
+    <section class="dashboard-grid">
 
 
-        <p>
-          This website is my personal learning journey, where I
-          explore, experiment, and share what I'm learning and
-          working on in the world of data.
-        </p>
+      <article class="card">
 
+        <h3>Power BI</h3>
 
         <p>
-          Whether it's analyzing trends, building models, or
-          designing data pipelines, I'm always excited to dive
-          deeper and grow in this ever-evolving field.
+          Learn how to transform your data into insights
+          using interactive dashboards and reports with Power BI.
         </p>
 
+        <a href="powerbi.html">
+          View Full Catalog
+        </a>
+
+      </article>
+
+
+      <article class="card">
+
+        <h3>
+          Python Predictive Analytics Project
+        </h3>
 
         <p>
-          Feel free to explore and connect!
+          Develop a complete Python Predictive Analytics project
+          from data handling to model deployment.
         </p>
 
-      </section>
+        <a href="ML.html">
+          View Full Catalog
+        </a>
 
+      </article>
 
 
-      <!-- ===============================================
-           PROJECT CARDS
-      ================================================ -->
+      <article class="card">
 
-      <section class="dashboard-grid">
+        <h3>
+          Azure Synapse Analytics
+          <br>
+          (Data Engineering)
+        </h3>
 
+        <p>
+          Azure Synapse is a cloud service for big data
+          and analytics.
+        </p>
 
-        <!-- =================================================
-             1. POWER BI
-        ================================================== -->
+        <a href="AzureSynapse.html">
+          View Full Catalog
+        </a>
 
-        <article class="card">
+      </article>
 
-          <h3>
-            Power BI
-          </h3>
 
-          <p>
-            Learn how to transform your data into insights
-            using interactive dashboards and reports with
-            Power BI.
-          </p>
+      <article class="card">
 
-          <a href="powerbi.html">
-            View Full Catalog
-          </a>
+        <h3>
+          Azure Data Factory
+          <br>
+          (Data Engineering)
+        </h3>
 
-        </article>
+        <p>
+          Build and manage data pipelines in the cloud
+          with Azure Data Factory.
+        </p>
 
+        <a href="AzureDataFactory.html">
+          View Full Catalog
+        </a>
 
+      </article>
 
-        <!-- =================================================
-             2. PYTHON PREDICTIVE ANALYTICS
-        ================================================== -->
 
-        <article class="card">
+      <article class="card">
 
-          <h3>
-            Python Predictive Analytics Project
-          </h3>
+        <h3>
+          Python for Data Analytics
+        </h3>
 
-          <p>
-            Develop a complete Python Predictive Analytics project
-            in Python, from data handling to model deployment.
-          </p>
+        <p>
+          Master Python basics and libraries like pandas,
+          NumPy, and Matplotlib to analyze and visualize data.
+        </p>
 
-          <a href="ML.html">
-            View Full Catalog
-          </a>
+        <a href="PythonDataAnalyticVersion.html">
+          View Full Catalog
+        </a>
 
-        </article>
+      </article>
 
 
+      <article class="card">
 
-        <!-- =================================================
-             3. AZURE SYNAPSE ANALYTICS
-        ================================================== -->
+        <h3>
+          Adobe Campaign Classic
+          <br>
+          (Data Engineering)
+        </h3>
 
-        <article class="card">
+        <p>
+          Practical notes focused on ETL workflows
+          in Adobe Campaign Classic.
+        </p>
 
-          <h3>
-            Azure Synapse Analytics
-            <br>
-            (Data Engineering)
-          </h3>
+        <a href="AdobeVersion.html">
+          View Full Catalog
+        </a>
 
-          <p>
-            Azure Synapse is a cloud service for big data
-            and analytics.
-          </p>
+      </article>
 
-          <a href="AzureSynapse.html">
-            View Full Catalog
-          </a>
 
-        </article>
+      <article class="card">
 
+        <h3>SQL Server</h3>
 
+        <p>
+          Master SQL for querying, transforming,
+          and managing data.
+        </p>
 
-        <!-- =================================================
-             4. AZURE DATA FACTORY
-        ================================================== -->
+        <a href="#">
+          View Full Catalog
+        </a>
 
-        <article class="card">
+      </article>
 
-          <h3>
-            Azure Data Factory
-            <br>
-            (Data Engineering)
-          </h3>
 
-          <p>
-            Build and manage data pipelines in the cloud
-            with Azure Data Factory.
-          </p>
+      <article class="card">
 
-          <a href="AzureDataFactory.html">
-            View Full Catalog
-          </a>
+        <h3>
+          Python for Data Science
+        </h3>
 
-        </article>
+        <p>
+          Learn preprocessing, modeling,
+          and evaluation with Python.
+        </p>
 
+        <a href="PythonDataScience.html">
+          View Full Catalog
+        </a>
 
+      </article>
 
-        <!-- =================================================
-             5. PYTHON FOR DATA ANALYTICS
-        ================================================== -->
 
-        <article class="card">
+    </section>
 
-          <h3>
-            Python for Data Analytics
-          </h3>
 
-          <p>
-            Master Python basics and libraries like pandas,
-            NumPy, and Matplotlib to analyze and visualize data.
-          </p>
+  </main>
 
-          <a href="PythonDataAnalyticVersion.html">
-            View Full Catalog
-          </a>
 
-        </article>
+</div>
 
 
+<footer>
 
-        <!-- =================================================
-             6. ADOBE CAMPAIGN CLASSIC
-        ================================================== -->
+  &copy; 2026 Raheleh — All rights reserved
 
-        <article class="card">
-
-          <h3>
-            Adobe Campaign Classic
-            <br>
-            (Data Engineering)
-          </h3>
-
-          <p>
-            A growing collection of practical notes in
-            Adobe Campaign Classic, focused on ETL workflows.
-          </p>
-
-          <a href="AdobeVersion.html">
-            View Full Catalog
-          </a>
-
-        </article>
-
-
-
-        <!-- =================================================
-             7. SQL SERVER
-        ================================================== -->
-
-        <article class="card">
-
-          <h3>
-            SQL Server
-          </h3>
-
-          <p>
-            Master SQL for querying, transforming, and managing
-            data across analytics and engineering tasks.
-          </p>
-
-          <a href="#">
-            View Full Catalog
-          </a>
-
-        </article>
-
-
-
-        <!-- =================================================
-             8. PYTHON FOR DATA SCIENCE
-        ================================================== -->
-
-        <article class="card">
-
-          <h3>
-            Python for Data Science
-          </h3>
-
-          <p>
-            Learn core data science skills with Python:
-            preprocessing, modeling, and evaluation.
-          </p>
-
-          <a href="PythonDataScience.html">
-            View Full Catalog
-          </a>
-
-        </article>
-
-
-      </section>
-
-
-    </main>
-
-
-  </div>
-
-
-
-  <!-- =====================================================
-       FOOTER
-  ====================================================== -->
-
-  <footer>
-
-    &copy; 2026 Raheleh — All rights reserved
-
-  </footer>
+</footer>
 
 
 </body>
