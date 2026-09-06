@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -9,14 +8,12 @@
   <title>DataCraft by Raheleh</title>
 
   <!-- Google Fonts -->
-
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600;700&display=swap"
     rel="stylesheet"
   />
 
   <!-- Google Material Icons -->
-
   <link
     href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet"
@@ -216,7 +213,7 @@
 
 
     /* =====================================================
-       ABOUT WEBSITE SECTION
+       ABOUT ME SECTION
     ===================================================== */
 
     .about-me {
@@ -239,16 +236,26 @@
       font-weight: 700;
       font-size: 28px;
       margin-top: 0;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       text-align: center;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     }
 
+    /*
+       Narrower text area for better readability.
+       This prevents very long lines across the blue box.
+    */
+
     .about-me p {
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 720px;
+      margin: 0 auto 16px auto;
       font-weight: 400;
+      line-height: 1.7;
+      text-align: left;
+    }
+
+    .about-me p:last-child {
+      margin-bottom: 0;
     }
 
 
@@ -258,8 +265,10 @@
 
     .dashboard-grid {
       display: grid;
+
       grid-template-columns:
         repeat(auto-fill, minmax(300px, 1fr));
+
       gap: 30px;
     }
 
@@ -321,7 +330,9 @@
       border-radius: 8px;
       font-weight: 600;
       text-align: center;
-      box-shadow: 0 6px 16px rgba(29, 78, 216, 0.6);
+
+      box-shadow:
+        0 6px 16px rgba(29, 78, 216, 0.6);
 
       transition:
         background-color 0.3s ease,
@@ -330,7 +341,9 @@
 
     .card a:hover {
       background-color: #2563eb;
-      box-shadow: 0 8px 22px rgba(37, 99, 235, 0.8);
+
+      box-shadow:
+        0 8px 22px rgba(37, 99, 235, 0.8);
     }
 
 
@@ -402,13 +415,23 @@
         width: fit-content;
         box-shadow: none;
       }
+
+      .about-me {
+        padding: 28px 24px;
+      }
+
+      .about-me p {
+        max-width: 100%;
+      }
     }
 
   </style>
 
 </head>
 
+
 <body>
+
 
   <!-- =====================================================
        HEADER
@@ -416,15 +439,17 @@
 
   <header>
 
-```
-<h1>DataCraft by Raheleh</h1>
+    <h1>
+      DataCraft by Raheleh
+    </h1>
 
-<p>
-  Curated learning &amp; project examples
-</p>
-```
+    <p>
+      Curated learning &amp; project examples
+    </p>
 
   </header>
+
+
 
   <!-- =====================================================
        HOME PAGE INDICATOR
@@ -432,15 +457,15 @@
 
   <div class="home-badge">
 
-```
-<span class="material-icons">
-  home
-</span>
+    <span class="material-icons">
+      home
+    </span>
 
-You are on the Home Page
-```
+    You are on the Home Page
 
   </div>
+
+
 
   <!-- =====================================================
        PAGE CONTAINER
@@ -448,286 +473,316 @@ You are on the Home Page
 
   <div class="container">
 
-```
-<!-- ===================================================
-     SIDEBAR
-==================================================== -->
 
-<aside class="sidebar">
+    <!-- ===================================================
+         SIDEBAR
+    ==================================================== -->
 
-  <h2>Topics</h2>
+    <aside class="sidebar">
 
-  <!-- ABOUT ME LINK -->
-
-  <a
-    href="about.html"
-    class="menu-item"
-  >
-
-    <span class="menu-left">
-
-      <span class="material-icons">
-        person
-      </span>
-
-      About Me
-
-    </span>
-
-    <span class="material-icons">
-      chevron_right
-    </span>
-
-  </a>
-
-</aside>
+      <h2>
+        Topics
+      </h2>
 
 
+      <!-- ABOUT ME LINK -->
 
-<!-- ===================================================
-     MAIN CONTENT
-==================================================== -->
+      <a
+        href="about.html"
+        class="menu-item"
+      >
 
-<main class="content">
+        <span class="menu-left">
 
+          <span class="material-icons">
+            person
+          </span>
 
-  <!-- ===============================================
-       ABOUT THIS WEBSITE
-  ================================================ -->
+          About Me
 
-  <section class="about-me">
-
-    <h2>
-      About This Website
-    </h2>
-
-    <p>
-
-      Hi! I'm Raheleh, passionate about all things data , from data engineering to data analytics.
-
-My experience spans data engineering, data analytics, business intelligence, and cloud data platforms, with a focus on designing end-to-end data solutions using Microsoft Fabric, Azure Data Factory, Azure Synapse Analytics, SQL, Python, and Power BI.
-
-I hold a Master’s Degree in Information Technology and a Bachelor’s Degree in Software Engineering, complemented by Microsoft certifications in Azure Data Engineering, Power BI, and Fabric Analytics Engineering.
-
-This website is my personal learning journey, where I explore, experiment, and share what I'm learning and working on in the world of data.
-
-Whether it's analyzing trends, building models, or designing data pipelines, I'm always excited to dive deeper and grow in this ever-evolving field.
-
-Feel free to explore and connect!
+        </span>
 
 
-    </p>
+        <span class="material-icons">
+          chevron_right
+        </span>
 
-  </section>
-
-
-
-  <!-- ===============================================
-       PROJECT CARDS
-  ================================================ -->
-
-  <section class="dashboard-grid">
-
-
-    <!-- =================================================
-         1. POWER BI
-    ================================================== -->
-
-    <article class="card">
-
-      <h3>
-        Power BI
-      </h3>
-
-      <p>
-        Learn how to transform your data into insights
-        using interactive dashboards and reports with
-        Power BI.
-      </p>
-
-      <a href="powerbi.html">
-        View Full Catalog
       </a>
 
-    </article>
+
+    </aside>
 
 
 
-    <!-- =================================================
-         2. PYTHON PREDICTIVE ANALYTICS
-    ================================================== -->
+    <!-- ===================================================
+         MAIN CONTENT
+    ==================================================== -->
 
-    <article class="card">
-
-      <h3>
-        Python Predictive 
-        <br>
-        (Analytics Project)
-      </h3>
-
-      <p>
-        Develop a complete Python Predictive Analytics project in
-        Python, from data handling to model deployment.
-      </p>
-
-      <a href="ML.html">
-        View Full Catalog
-      </a>
-
-    </article>
+    <main class="content">
 
 
+      <!-- ===============================================
+           ABOUT ME
+      ================================================ -->
 
-    <!-- =================================================
-         3. AZURE SYNAPSE ANALYTICS
-    ================================================== -->
+      <section class="about-me">
 
-    <article class="card">
-
-      <h3>
-        Azure Synapse Analytics
-        <br>
-        (Data Engineering)
-      </h3>
-
-      <p>
-        Azure Synapse is a cloud service for big data
-        and analytics.
-      </p>
-
-      <a href="AzureSynapse.html">
-        View Full Catalog
-      </a>
-
-    </article>
+        <h2>
+          About Me
+        </h2>
 
 
+        <p>
+          Hi! I'm Raheleh, passionate about all things data —
+          from data engineering to data analytics.
+        </p>
 
-    <!-- =================================================
-         4. AZURE DATA FACTORY
-    ================================================== -->
 
-    <article class="card">
+        <p>
+          My experience spans data engineering, data analytics,
+          business intelligence, and cloud data platforms, with a
+          focus on designing end-to-end data solutions using
+          Microsoft Fabric, Azure Data Factory, Azure Synapse
+          Analytics, SQL, Python, and Power BI.
+        </p>
 
-      <h3>
-        Azure Data Factory
-        <br>
-        (Data Engineering)
-      </h3>
 
-      <p>
-        Build and manage data pipelines in the cloud
-        with Azure Data Factory.
-      </p>
+        <p>
+          I hold a Master’s Degree in Information Technology
+          and a Bachelor’s Degree in Software Engineering,
+          complemented by Microsoft certifications in Azure
+          Data Engineering, Power BI, and Fabric Analytics Engineering.
+        </p>
 
-      <a href="AzureDataFactory.html">
-        View Full Catalog
-      </a>
 
-    </article>
+        <p>
+          This website is my personal learning journey, where I
+          explore, experiment, and share what I'm learning and
+          working on in the world of data.
+        </p>
+
+
+        <p>
+          Whether it's analyzing trends, building models, or
+          designing data pipelines, I'm always excited to dive
+          deeper and grow in this ever-evolving field.
+        </p>
+
+
+        <p>
+          Feel free to explore and connect!
+        </p>
+
+      </section>
 
 
 
-    <!-- =================================================
-         5. PYTHON FOR DATA ANALYTICS
-    ================================================== -->
+      <!-- ===============================================
+           PROJECT CARDS
+      ================================================ -->
 
-    <article class="card">
-
-      <h3>
-        Python for Data Analytics
-      </h3>
-
-      <p>
-        Master Python basics and libraries like pandas,
-        NumPy, and Matplotlib to analyze and visualize data.
-      </p>
-
-      <a href="PythonDataAnalyticVersion.html">
-        View Full Catalog
-      </a>
-
-    </article>
+      <section class="dashboard-grid">
 
 
+        <!-- =================================================
+             1. POWER BI
+        ================================================== -->
 
-    <!-- =================================================
-         6. ADOBE CAMPAIGN CLASSIC
-    ================================================== -->
+        <article class="card">
 
-    <article class="card">
+          <h3>
+            Power BI
+          </h3>
 
-      <h3>
-        Adobe Campaign Classic
-        <br>
-        (Data Engineering)
-      </h3>
+          <p>
+            Learn how to transform your data into insights
+            using interactive dashboards and reports with
+            Power BI.
+          </p>
 
-      <p>
-        A growing collection of practical notes in
-        Adobe Campaign Classic, focused on ETL workflows.
-      </p>
+          <a href="powerbi.html">
+            View Full Catalog
+          </a>
 
-      <a href="AdobeVersion.html">
-        View Full Catalog
-      </a>
-
-    </article>
+        </article>
 
 
 
-    <!-- =================================================
-         7. SQL SERVER
-    ================================================== -->
+        <!-- =================================================
+             2. PYTHON PREDICTIVE ANALYTICS
+        ================================================== -->
 
-    <article class="card">
+        <article class="card">
 
-      <h3>
-        SQL Server
-      </h3>
+          <h3>
+            Python Predictive Analytics Project
+          </h3>
 
-      <p>
-        Master SQL for querying, transforming, and managing
-        data across analytics and engineering tasks.
-      </p>
+          <p>
+            Develop a complete Python Predictive Analytics project
+            in Python, from data handling to model deployment.
+          </p>
 
-      <a href="#">
-        View Full Catalog
-      </a>
+          <a href="ML.html">
+            View Full Catalog
+          </a>
 
-    </article>
-
-
-
-    <!-- =================================================
-         8. PYTHON FOR DATA SCIENCE
-    ================================================== -->
-
-    <article class="card">
-
-      <h3>
-        Python for Data Science
-      </h3>
-
-      <p>
-        Learn core data science skills with Python:
-        preprocessing, modeling, and evaluation.
-      </p>
-
-      <a href="PythonDataScience.html">
-        View Full Catalog
-      </a>
-
-    </article>
+        </article>
 
 
-  </section>
+
+        <!-- =================================================
+             3. AZURE SYNAPSE ANALYTICS
+        ================================================== -->
+
+        <article class="card">
+
+          <h3>
+            Azure Synapse Analytics
+            <br>
+            (Data Engineering)
+          </h3>
+
+          <p>
+            Azure Synapse is a cloud service for big data
+            and analytics.
+          </p>
+
+          <a href="AzureSynapse.html">
+            View Full Catalog
+          </a>
+
+        </article>
 
 
-</main>
-```
+
+        <!-- =================================================
+             4. AZURE DATA FACTORY
+        ================================================== -->
+
+        <article class="card">
+
+          <h3>
+            Azure Data Factory
+            <br>
+            (Data Engineering)
+          </h3>
+
+          <p>
+            Build and manage data pipelines in the cloud
+            with Azure Data Factory.
+          </p>
+
+          <a href="AzureDataFactory.html">
+            View Full Catalog
+          </a>
+
+        </article>
+
+
+
+        <!-- =================================================
+             5. PYTHON FOR DATA ANALYTICS
+        ================================================== -->
+
+        <article class="card">
+
+          <h3>
+            Python for Data Analytics
+          </h3>
+
+          <p>
+            Master Python basics and libraries like pandas,
+            NumPy, and Matplotlib to analyze and visualize data.
+          </p>
+
+          <a href="PythonDataAnalyticVersion.html">
+            View Full Catalog
+          </a>
+
+        </article>
+
+
+
+        <!-- =================================================
+             6. ADOBE CAMPAIGN CLASSIC
+        ================================================== -->
+
+        <article class="card">
+
+          <h3>
+            Adobe Campaign Classic
+            <br>
+            (Data Engineering)
+          </h3>
+
+          <p>
+            A growing collection of practical notes in
+            Adobe Campaign Classic, focused on ETL workflows.
+          </p>
+
+          <a href="AdobeVersion.html">
+            View Full Catalog
+          </a>
+
+        </article>
+
+
+
+        <!-- =================================================
+             7. SQL SERVER
+        ================================================== -->
+
+        <article class="card">
+
+          <h3>
+            SQL Server
+          </h3>
+
+          <p>
+            Master SQL for querying, transforming, and managing
+            data across analytics and engineering tasks.
+          </p>
+
+          <a href="#">
+            View Full Catalog
+          </a>
+
+        </article>
+
+
+
+        <!-- =================================================
+             8. PYTHON FOR DATA SCIENCE
+        ================================================== -->
+
+        <article class="card">
+
+          <h3>
+            Python for Data Science
+          </h3>
+
+          <p>
+            Learn core data science skills with Python:
+            preprocessing, modeling, and evaluation.
+          </p>
+
+          <a href="PythonDataScience.html">
+            View Full Catalog
+          </a>
+
+        </article>
+
+
+      </section>
+
+
+    </main>
+
 
   </div>
+
+
 
   <!-- =====================================================
        FOOTER
@@ -735,11 +790,10 @@ Feel free to explore and connect!
 
   <footer>
 
-```
-&copy; 2026 Raheleh — All rights reserved
-```
+    &copy; 2026 Raheleh — All rights reserved
 
   </footer>
+
 
 </body>
 
