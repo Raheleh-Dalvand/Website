@@ -214,68 +214,37 @@
 
     /* =====================================================
        ABOUT ME SECTION
-       Redesigned only — rest of page unchanged
+       MODIFIED SECTION ONLY
     ===================================================== */
 
     .about-me {
       position: relative;
 
-      background:
-        linear-gradient(
-          135deg,
-          #ffffff 0%,
-          #f8fbff 65%,
-          #f3f7ff 100%
-        );
+      background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #f8fbff 100%
+      );
 
       border: 1px solid #e2e8f0;
       border-left: 5px solid #2563eb;
 
       border-radius: 16px;
 
-      padding: 30px 36px;
+      padding: 30px 36px 28px;
 
       margin-bottom: 40px;
 
       box-shadow:
-        0 8px 25px rgba(15, 23, 42, 0.07);
-
-      overflow: hidden;
+        0 8px 24px rgba(15, 23, 42, 0.07);
     }
 
 
-    /* Very subtle background decoration */
-
-    .about-me::after {
-      content: "";
-
-      position: absolute;
-
-      width: 230px;
-      height: 230px;
-
-      right: -90px;
-      top: -120px;
-
-      border-radius: 50%;
-
-      background:
-        radial-gradient(
-          circle,
-          rgba(37, 99, 235, 0.08),
-          rgba(37, 99, 235, 0)
-        );
-
-      pointer-events: none;
-    }
-
-
-    /* Small ABOUT label */
+    /* =====================================================
+       ABOUT LABEL
+    ===================================================== */
 
     .about-label {
-      position: relative;
-      z-index: 1;
-
       display: flex;
       align-items: center;
       gap: 7px;
@@ -293,7 +262,6 @@
       color: #2563eb;
     }
 
-
     .about-label::before {
       content: "";
 
@@ -306,13 +274,12 @@
     }
 
 
-    /* Main heading */
+    /* =====================================================
+       ABOUT HEADING
+    ===================================================== */
 
     .about-me h2 {
-      position: relative;
-      z-index: 1;
-
-      margin: 0 0 6px;
+      margin: 0 0 5px;
 
       font-family: 'Poppins', sans-serif;
 
@@ -329,13 +296,12 @@
     }
 
 
-    /* Role line */
+    /* =====================================================
+       ABOUT ROLE
+    ===================================================== */
 
     .about-role {
-      position: relative;
-      z-index: 1;
-
-      margin: 0 0 15px;
+      margin: 0 0 16px;
 
       font-size: 16px;
       font-weight: 600;
@@ -346,17 +312,16 @@
     }
 
 
-    /* Description */
+    /* =====================================================
+       ABOUT DESCRIPTION
+    ===================================================== */
 
     .about-description {
-      position: relative;
-      z-index: 1;
-
-      max-width: 1150px;
+      max-width: 1100px;
 
       margin: 0;
 
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 400;
 
       line-height: 1.75;
@@ -364,6 +329,63 @@
       color: #64748b;
 
       text-align: left;
+    }
+
+
+    /* =====================================================
+       ABOUT SKILL / FOCUS BADGES
+    ===================================================== */
+
+    .about-skills {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 20px;
+    }
+
+    .about-skill {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 7px;
+
+      padding: 7px 12px;
+
+      background-color: #ffffff;
+
+      border: 1px solid #dbe4f0;
+
+      border-radius: 8px;
+
+      color: #475569;
+
+      font-size: 12px;
+      font-weight: 600;
+
+      box-shadow:
+        0 2px 6px rgba(15, 23, 42, 0.03);
+
+      transition:
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .about-skill .material-icons {
+      font-size: 16px;
+
+      color: #2563eb;
+    }
+
+    .about-skill:hover {
+      transform: translateY(-2px);
+
+      border-color: #bfdbfe;
+
+      box-shadow:
+        0 5px 12px rgba(15, 23, 42, 0.06);
     }
 
 
@@ -548,6 +570,9 @@
         box-shadow: none;
       }
 
+
+      /* ABOUT SECTION MOBILE */
+
       .about-me {
         padding: 26px 24px;
       }
@@ -562,7 +587,18 @@
 
       .about-description {
         max-width: 100%;
+
         font-size: 14px;
+      }
+
+      .about-skills {
+        gap: 8px;
+
+        margin-top: 18px;
+      }
+
+      .about-skill {
+        padding: 7px 10px;
       }
     }
 
@@ -664,29 +700,104 @@
 
       <!-- ===============================================
            ABOUT ME
+           MODIFIED SECTION
       ================================================ -->
 
       <section class="about-me">
+
+
+        <!-- Small section label -->
 
         <div class="about-label">
           About
         </div>
 
+
+        <!-- Main introduction -->
+
         <h2>
           Hi, I'm Raheleh.
         </h2>
+
+
+        <!-- Role -->
 
         <p class="about-role">
           I work across data engineering and data analytics.
         </p>
 
+
+        <!-- Description -->
+
         <p class="about-description">
           This website is my personal learning journey, where I explore,
-          experiment, and share what I'm learning and working on in the world
-          of data. Whether it's analyzing trends, building models, or designing
-          data pipelines, I'm always excited to dive deeper and grow in this
-          ever-evolving field. Feel free to explore and connect!
+          experiment, and share what I'm learning and working on in the
+          world of data. Whether it's analyzing trends, building models,
+          or designing data pipelines, I'm always excited to dive deeper
+          and grow in this ever-evolving field. Feel free to explore and
+          connect!
         </p>
+
+
+        <!-- Areas of focus -->
+
+        <div class="about-skills">
+
+
+          <div class="about-skill">
+
+            <span class="material-icons">
+              storage
+            </span>
+
+            <span>
+              Data Engineering
+            </span>
+
+          </div>
+
+
+          <div class="about-skill">
+
+            <span class="material-icons">
+              analytics
+            </span>
+
+            <span>
+              Data Analytics
+            </span>
+
+          </div>
+
+
+          <div class="about-skill">
+
+            <span class="material-icons">
+              account_tree
+            </span>
+
+            <span>
+              Data Pipelines
+            </span>
+
+          </div>
+
+
+          <div class="about-skill">
+
+            <span class="material-icons">
+              bar_chart
+            </span>
+
+            <span>
+              BI &amp; Reporting
+            </span>
+
+          </div>
+
+
+        </div>
+
 
       </section>
 
@@ -699,7 +810,9 @@
       <section class="dashboard-grid">
 
 
-        <!-- 1. POWER BI -->
+        <!-- =================================================
+             1. POWER BI
+        ================================================== -->
 
         <article class="card">
 
@@ -721,7 +834,9 @@
 
 
 
-        <!-- 2. PYTHON PREDICTIVE ANALYTICS -->
+        <!-- =================================================
+             2. PYTHON PREDICTIVE ANALYTICS
+        ================================================== -->
 
         <article class="card">
 
@@ -743,7 +858,9 @@
 
 
 
-        <!-- 3. AZURE SYNAPSE ANALYTICS -->
+        <!-- =================================================
+             3. AZURE SYNAPSE ANALYTICS
+        ================================================== -->
 
         <article class="card">
 
@@ -766,7 +883,9 @@
 
 
 
-        <!-- 4. AZURE DATA FACTORY -->
+        <!-- =================================================
+             4. AZURE DATA FACTORY
+        ================================================== -->
 
         <article class="card">
 
@@ -789,7 +908,9 @@
 
 
 
-        <!-- 5. PYTHON FOR DATA ANALYTICS -->
+        <!-- =================================================
+             5. PYTHON FOR DATA ANALYTICS
+        ================================================== -->
 
         <article class="card">
 
@@ -810,7 +931,9 @@
 
 
 
-        <!-- 6. ADOBE CAMPAIGN CLASSIC -->
+        <!-- =================================================
+             6. ADOBE CAMPAIGN CLASSIC
+        ================================================== -->
 
         <article class="card">
 
@@ -833,7 +956,9 @@
 
 
 
-        <!-- 7. SQL SERVER -->
+        <!-- =================================================
+             7. SQL SERVER
+        ================================================== -->
 
         <article class="card">
 
@@ -855,7 +980,9 @@
 
 
 
-        <!-- 8. PYTHON FOR DATA SCIENCE -->
+        <!-- =================================================
+             8. PYTHON FOR DATA SCIENCE
+        ================================================== -->
 
         <article class="card">
 
