@@ -1,32 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>About Me | DataCraft by Raheleh</title>
 
-  <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700&display=swap"
     rel="stylesheet"
-  />
-
-  <!-- Google Material Icons -->
+  >
   <link
     href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet"
-  />
-
+  >
 
   <style>
-
-    /* =====================================================
-       GENERAL
-    ===================================================== */
-
     * {
       box-sizing: border-box;
     }
@@ -36,28 +25,25 @@
       margin: 0;
       padding: 0;
       min-height: 100%;
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       background: #f1f5f9;
       color: #1f2937;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
-
-    /* =====================================================
-       HEADER
-    ===================================================== */
+    /* Header */
 
     header {
       position: relative;
-      background-color: #0f172a;
-      color: white;
       padding: 28px 30px 24px;
+      color: white;
+      background: #0f172a;
       text-align: center;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
 
@@ -70,39 +56,26 @@
 
     header p {
       margin: 8px 0 0;
+      color: #cbd5e1;
       font-size: 16px;
       font-style: italic;
-      color: #cbd5e1;
     }
-
-
-    /* =====================================================
-       HOME BUTTON
-    ===================================================== */
 
     .home-button {
       position: absolute;
       top: 28px;
       right: 30px;
-
       display: flex;
       align-items: center;
       gap: 8px;
-
-      background-color: #e0f2fe;
-      color: #0369a1;
-
       padding: 12px 20px;
+      color: #0369a1;
+      background: #e0f2fe;
       border-radius: 28px;
-
-      font-weight: 600;
       font-size: 14px;
-
+      font-weight: 600;
       box-shadow: 0 6px 18px rgba(3, 105, 161, 0.25);
-
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .home-button:hover {
@@ -114,10 +87,7 @@
       font-size: 20px;
     }
 
-
-    /* =====================================================
-       PAGE LAYOUT
-    ===================================================== */
+    /* Page layout */
 
     .container {
       display: flex;
@@ -125,59 +95,40 @@
       min-height: calc(100vh - 120px);
     }
 
-
-    /* =====================================================
-       SIDEBAR
-    ===================================================== */
-
     .sidebar {
       width: 260px;
       flex-shrink: 0;
-
-      background-color: #1e293b;
       padding: 38px 20px;
-
       color: #cbd5e1;
-
+      background: #1e293b;
       box-shadow: inset -1px 0 0 #334155;
     }
 
     .sidebar h2 {
-      font-size: 16px;
-      text-transform: uppercase;
-      letter-spacing: 0.7px;
-
-      color: #94a3b8;
-
-      border-bottom: 1px solid #334155;
-
+      margin: 0 0 16px;
       padding-bottom: 8px;
-
-      margin-top: 0;
-      margin-bottom: 16px;
+      color: #94a3b8;
+      border-bottom: 1px solid #334155;
+      font-size: 16px;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
     }
 
     .menu-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       padding: 12px 10px;
-      border-radius: 8px;
-
       color: #cbd5e1;
+      border-radius: 8px;
       font-weight: 600;
-
-      transition:
-        background-color 0.25s ease,
-        color 0.25s ease,
-        transform 0.2s ease;
+      transition: 0.25s ease;
     }
 
     .menu-item:hover,
     .menu-item.active {
-      background-color: #334155;
       color: white;
+      background: #334155;
     }
 
     .menu-item:hover {
@@ -200,110 +151,66 @@
       color: white;
     }
 
-
-    /* =====================================================
-       MAIN CONTENT
-    ===================================================== */
-
     main.content {
       flex: 1;
-
       padding: 50px 60px;
-
       background: white;
-
       overflow: hidden;
     }
 
     .page-title {
-      margin-top: 0;
-      margin-bottom: 30px;
-
-      font-family: 'Poppins', sans-serif;
-
+      margin: 0 0 30px;
+      color: #1e293b;
+      font-family: "Poppins", sans-serif;
       font-size: 32px;
       font-weight: 700;
-
-      color: #1e293b;
     }
 
-
-    /* =====================================================
-       PROFESSIONAL PROFILE
-    ===================================================== */
+    /* Professional profile */
 
     .profile-card {
-      background:
-        linear-gradient(
-          135deg,
-          #eff6ff,
-          #ffffff
-        );
-
-      border-left: 5px solid #2563eb;
-
-      border-radius: 16px;
-
-      padding: 32px 36px;
-
-      box-shadow:
-        0 8px 24px rgba(15, 23, 42, 0.08);
-
       margin-bottom: 40px;
+      padding: 32px 36px;
+      background: linear-gradient(135deg, #eff6ff, #ffffff);
+      border-left: 5px solid #2563eb;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
     }
 
     .profile-card h2 {
-      margin-top: 0;
-      margin-bottom: 18px;
-
-      font-family: 'Poppins', sans-serif;
-
+      margin: 0 0 18px;
       color: #1d4ed8;
-
+      font-family: "Poppins", sans-serif;
       font-size: 24px;
     }
 
     .profile-card p {
+      margin: 0 0 16px;
+      color: #475569;
       font-size: 16px;
       line-height: 1.8;
-
-      color: #475569;
-
-      margin: 0 0 16px;
     }
 
     .profile-card p:last-child {
       margin-bottom: 0;
     }
 
-
-    /* =====================================================
-       GENERAL SECTIONS
-    ===================================================== */
+    /* General sections */
 
     .about-section {
       margin-bottom: 42px;
     }
 
-    .about-section h2 {
-      font-family: 'Poppins', sans-serif;
-
-      font-size: 22px;
-
-      color: #1e3a5f;
-
-      margin-top: 0;
-      margin-bottom: 22px;
-
+    .about-section > h2 {
+      margin: 0 0 22px;
       padding-bottom: 8px;
-
+      color: #1e3a5f;
       border-bottom: 2px solid #60a5fa;
+      font-family: "Poppins", sans-serif;
+      font-size: 22px;
     }
 
-
-    /* =====================================================
-       TECHNOLOGIES
-    ===================================================== */
+    /* Skills */
 
     .skill-tags {
       display: flex;
@@ -312,190 +219,221 @@
     }
 
     .skill-tags span {
-      background: #eff6ff;
-
-      color: #1d4ed8;
-
-      border: 1px solid #bfdbfe;
-
       padding: 9px 14px;
-
+      color: #1d4ed8;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
       border-radius: 20px;
-
       font-size: 14px;
       font-weight: 600;
-
-      transition:
-        transform 0.2s ease,
-        background-color 0.2s ease;
+      transition: 0.2s ease;
     }
 
     .skill-tags span:hover {
+      background: #dbeafe;
       transform: translateY(-2px);
-      background-color: #dbeafe;
     }
 
+    /* Work experience */
 
-    /* =====================================================
-       QUALIFICATIONS
-    ===================================================== */
+    .experience-list {
+      position: relative;
+      display: grid;
+      gap: 22px;
+      padding-left: 30px;
+    }
+
+    .experience-list::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 8px;
+      width: 2px;
+      background: #bfdbfe;
+    }
+
+    .experience-card {
+      position: relative;
+      padding: 24px 26px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .experience-card::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: -29px;
+      width: 14px;
+      height: 14px;
+      background: #2563eb;
+      border: 4px solid #dbeafe;
+      border-radius: 50%;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.1);
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 14px;
+    }
+
+    .experience-card h3 {
+      margin: 0 0 5px;
+      color: #1e293b;
+      font-family: "Poppins", sans-serif;
+      font-size: 19px;
+    }
+
+    .experience-role {
+      margin: 0;
+      color: #2563eb;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .experience-date {
+      flex-shrink: 0;
+      padding: 6px 11px;
+      color: #1d4ed8;
+      background: #dbeafe;
+      border-radius: 18px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .experience-card > p {
+      margin: 0 0 12px;
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .experience-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 16px;
+    }
+
+    .experience-tech span {
+      padding: 5px 9px;
+      color: #475569;
+      background: white;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* Qualifications */
 
     .qualification {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
-      background: #f8fafc;
-
-      border-radius: 12px;
-
-      padding: 20px 24px;
-
       margin-bottom: 14px;
-
-      box-shadow:
-        0 4px 12px rgba(15, 23, 42, 0.05);
+      padding: 20px 24px;
+      background: #f8fafc;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
     }
 
     .qualification h3 {
       margin: 0 0 6px;
-
-      font-size: 17px;
-
       color: #1f2937;
+      font-size: 17px;
     }
 
     .qualification p {
       margin: 0;
-
       color: #64748b;
-
       font-size: 14px;
     }
 
-    .qualification .institution {
-      font-weight: 600;
+    .institution {
       color: #2563eb;
+      font-weight: 600;
     }
 
-
-    /* =====================================================
-       CERTIFICATIONS
-    ===================================================== */
+    /* Certifications */
 
     .cert-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(auto-fit, minmax(320px, 1fr));
-
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 20px;
     }
 
     .cert-card {
       display: flex;
-
-      gap: 16px;
-
       align-items: flex-start;
-
-      background: #f8fafc;
-
-      border-radius: 14px;
-
+      gap: 16px;
       padding: 22px;
-
-      box-shadow:
-        0 6px 18px rgba(15, 23, 42, 0.06);
-
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+      background: #f8fafc;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+      transition: 0.2s ease;
     }
 
     .cert-card:hover {
       transform: translateY(-4px);
-
-      box-shadow:
-        0 12px 26px rgba(15, 23, 42, 0.10);
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.1);
     }
 
     .cert-card > .material-icons {
-      font-size: 30px;
       color: #2563eb;
+      font-size: 30px;
     }
 
     .cert-card h3 {
       margin: 0 0 6px;
-
-      font-size: 17px;
-
-      line-height: 1.4;
-
       color: #1e293b;
+      font-size: 17px;
+      line-height: 1.4;
     }
 
     .cert-card p {
       margin: 0 0 14px;
-
       color: #64748b;
-
       font-size: 14px;
     }
 
     .cert-card a {
       display: inline-block;
-
-      background-color: #2563eb;
-
-      color: white;
-
       padding: 8px 14px;
-
+      color: white;
+      background: #2563eb;
       border-radius: 8px;
-
       font-size: 13px;
       font-weight: 600;
-
-      box-shadow:
-        0 4px 10px rgba(37, 99, 235, 0.25);
-
-      transition:
-        background-color 0.2s ease,
-        box-shadow 0.2s ease;
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
     }
 
     .cert-card a:hover {
-      background-color: #1d4ed8;
-
-      box-shadow:
-        0 6px 14px rgba(37, 99, 235, 0.35);
+      background: #1d4ed8;
     }
 
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-
     footer {
-      text-align: center;
-
       padding: 18px 30px;
-
-      background-color: #f3f4f6;
-
       color: #64748b;
-
+      background: #f3f4f6;
+      text-align: center;
       font-size: 14px;
     }
 
-
-    /* =====================================================
-       RESPONSIVE
-    ===================================================== */
+    /* Responsive design */
 
     @media (max-width: 900px) {
-
       header {
         padding-top: 90px;
       }
@@ -518,20 +456,19 @@
         padding: 35px 22px;
       }
 
-      .qualification {
+      .qualification,
+      .experience-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
+        gap: 10px;
       }
 
       .cert-grid {
         grid-template-columns: 1fr;
       }
-
     }
 
     @media (max-width: 600px) {
-
       header h1 {
         font-size: 28px;
       }
@@ -548,121 +485,65 @@
         padding: 25px 22px;
       }
 
+      .experience-list {
+        padding-left: 24px;
+      }
+
+      .experience-card {
+        padding: 21px 19px;
+      }
+
+      .experience-card::before {
+        left: -24px;
+      }
     }
-
   </style>
-
 </head>
 
-
 <body>
-
-
-  <!-- =====================================================
-       HEADER
-  ===================================================== -->
-
   <header>
+    <h1>DataCraft by Raheleh</h1>
+    <p>A portfolio of data analytics &amp; engineering scenarios</p>
 
-    <h1>
-      DataCraft by Raheleh
-    </h1>
-
-    <p>
-      A portfolio of data analytics &amp; engineering scenarios
-    </p>
-
-    <a
-      class="home-button"
-      href="index.html"
-    >
-
-      <span class="material-icons">
-        arrow_back
-      </span>
-
+    <a class="home-button" href="index.html">
+      <span class="material-icons">arrow_back</span>
       Back to Home Page
-
     </a>
-
   </header>
 
-
-
-  <!-- =====================================================
-       PAGE CONTAINER
-  ===================================================== -->
-
   <div class="container">
-
-
-    <!-- ===================================================
-         SIDEBAR
-    ==================================================== -->
-
     <aside class="sidebar">
+      <h2>Topics</h2>
 
-      <h2>
-        Topics
-      </h2>
-
-      <a
-        href="about.html"
-        class="menu-item active"
-      >
-
+      <a href="about.html" class="menu-item active">
         <span class="menu-left">
-
-          <span class="material-icons">
-            person
-          </span>
-
+          <span class="material-icons">person</span>
           About Me
-
         </span>
 
-        <span class="material-icons">
-          chevron_right
-        </span>
-
+        <span class="material-icons">chevron_right</span>
       </a>
-
     </aside>
 
-
-
-    <!-- ===================================================
-         MAIN CONTENT
-    ==================================================== -->
-
     <main class="content">
-
-      <h1 class="page-title">
-        About Me
-      </h1>
-
-
-
-      <!-- =================================================
-           PROFESSIONAL PROFILE
-      ================================================== -->
+      <h1 class="page-title">About Me</h1>
 
       <section class="profile-card">
-
-        <h2>
-          Professional Profile
-        </h2>
+        <h2>Professional Profile</h2>
 
         <p>
-          Certified in Azure Data Engineering, Fabric Analytics Engineering, Power BI Data Analytics, and SQL, with a Master’s degree in Information Technology and a Bachelor’s degree in Software Engineering.with experience designing, developing, and supporting data
-          platforms using Microsoft Fabric, Azure Data Factory, Azure Synapse
-          Analytics, SQL/T-SQL, Spark, and Power BI.
+          Certified in Azure Data Engineering, Fabric Analytics Engineering,
+          Power BI Data Analytics, and SQL, with a Master’s degree in
+          Information Technology and a Bachelor’s degree in Software
+          Engineering. Experienced in designing, developing, and supporting
+          data platforms using Microsoft Fabric, Azure Data Factory, Azure
+          Synapse Analytics, SQL/T-SQL, Spark, and Power BI.
         </p>
 
         <p>
-          Skilled in building end-to-end data engineering solutions including
+          Skilled in building end-to-end data engineering solutions, including
           data ingestion, ETL/ELT pipelines, data warehousing, Lakehouse
-          architecture, data modelling, and performance optimization.
+          architecture, data modelling, and performance optimisation.
         </p>
 
         <p>
@@ -670,23 +551,12 @@
           trusted, and analytics-ready datasets that support operational
           reporting, business intelligence, and strategic decision-making.
         </p>
-
       </section>
 
-
-
-      <!-- =================================================
-           CORE TECHNOLOGIES
-      ================================================== -->
-
       <section class="about-section">
-
-        <h2>
-          Core Technologies
-        </h2>
+        <h2>Core Technologies</h2>
 
         <div class="skill-tags">
-
           <span>Microsoft Fabric</span>
           <span>Azure Data Factory</span>
           <span>Azure Synapse Analytics</span>
@@ -699,100 +569,276 @@
           <span>Data Warehousing</span>
           <span>Lakehouse Architecture</span>
           <span>Data Modelling</span>
-
         </div>
-
       </section>
 
+      <section class="about-section">
+        <h2>Work Experience</h2>
 
+        <div class="experience-list">
+          <article class="experience-card">
+            <div class="experience-header">
+              <div>
+                <h3>APG</h3>
+                <p class="experience-role">
+                  Data Engineering &amp; Analytics
+                </p>
+              </div>
 
-      <!-- =================================================
-           ACADEMIC QUALIFICATIONS
-      ================================================== -->
+              <span class="experience-date">2026–Present</span>
+            </div>
+
+            <p>
+              I design and deliver end-to-end data engineering and analytics
+              platforms for Estimation and Project Delivery teams using
+              Microsoft Fabric. I build automated ELT pipelines that
+              integrate business, construction, API, SharePoint, and document
+              data into OneLake using a Bronze, Silver, and Gold architecture.
+            </p>
+
+            <p>
+              I also develop star-schema models, Power BI dashboards, digital
+              forms, business applications, automated workflows, and
+              intelligent document-processing solutions to improve construction
+              reporting and operational decision-making.
+            </p>
+
+            <div class="experience-tech">
+              <span>Microsoft Fabric</span>
+              <span>OneLake</span>
+              <span>Dataflow Gen2</span>
+              <span>Fabric Pipelines</span>
+              <span>PySpark</span>
+              <span>Power BI</span>
+              <span>Python</span>
+              <span>Power Apps</span>
+              <span>Power Automate</span>
+              <span>REST APIs</span>
+              <span>Azure AI</span>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <div class="experience-header">
+              <div>
+                <h3>IAG</h3>
+                <p class="experience-role">
+                  Data Engineering &amp; Business Intelligence
+                </p>
+              </div>
+
+              <span class="experience-date">2024–2025</span>
+            </div>
+
+            <p>
+              I developed automated validation pipelines supporting migration
+              from on-premises PostgreSQL to Google Cloud. My work included
+              source-to-target reconciliation, exception detection, audit
+              reporting, and Power BI dashboards for tracking migration
+              quality, discrepancies, and readiness.
+            </p>
+
+            <p>
+              I also developed and maintained ETL processes using PostgreSQL, and Adobe Campaign Classic to support large-scale marketing workflows.
+            </p>
+
+            <div class="experience-tech">
+              <span>Adobe Campaign Classic</span>
+              <span>PostgreSQL</span>
+              <span>Python</span>
+              <span>Power BI</span>
+              <span>DAX</span>
+              <span>JavaScript</span>
+              <span>Postman</span>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <div class="experience-header">
+              <div>
+                <h3>dashboardWorx</h3>
+                <p class="experience-role">
+                  Data Engineering &amp; Business Intelligence
+                </p>
+              </div>
+
+              <span class="experience-date">2023–2024</span>
+            </div>
+
+            <p>
+              I developed Azure-based data and analytics solutions for sales
+              and marketing teams. I built parameterised ingestion pipelines,
+              implemented cleansing and business transformation rules, and
+              produced governed Bronze, Silver, and Gold datasets.
+            </p>
+
+            <p>
+              I designed star-schema data models and interactive Power BI
+              reports covering sales performance, lead conversion, campaign
+              effectiveness, customer retention, and churn trends.
+            </p>
+
+            <div class="experience-tech">
+              <span>Azure Data Factory</span>
+              <span>Azure Data Lake Gen2</span>
+              <span>Azure Synapse Analytics</span>
+              <span>Power BI</span>
+              <span>SQL</span>
+              <span>Mapping Data Flows</span>
+              <span>Star Schema</span>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <div class="experience-header">
+              <div>
+                <h3>Abbotsleigh</h3>
+                <p class="experience-role">
+                  Data Integration, Reporting &amp; Systems Management
+                </p>
+              </div>
+
+              <span class="experience-date">2022–2023</span>
+            </div>
+
+            <p>
+              I developed and maintained ETL pipelines for student, staff,
+              activity, and academic data. I implemented business rules,
+              monitored scheduled processes, resolved failures, and delivered
+              interactive SSRS reports for academic and operational reporting.
+            </p>
+
+            <p>
+              I also managed SQL Server databases and the Student Information
+              System, improved database performance, supported users and
+              vendors, and protected sensitive data through role-based and
+              row-level security.
+            </p>
+
+            <div class="experience-tech">
+              <span>SSIS</span>
+              <span>SSRS</span>
+              <span>SQL Server</span>
+              <span>T-SQL</span>
+              <span>C#</span>
+              <span>Excel</span>
+              <span>SIS</span>
+              <span>Data Security</span>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <div class="experience-header">
+              <div>
+                <h3>Saipa</h3>
+                <p class="experience-role">
+                  Enterprise Software Development
+                </p>
+              </div>
+
+              <span class="experience-date">2011–2015</span>
+            </div>
+
+            <p>
+              I developed enterprise applications supporting organisational
+              structure management, employee records, human resources, and
+              payroll processing. I used layered architecture and established
+              design patterns to create reusable, maintainable, and
+              transaction-safe systems.
+            </p>
+
+            <p>
+              My responsibilities included implementing HR and payroll business
+              rules, organisational hierarchy interfaces, secure role-based
+              access, database procedures, and optimised batch processing.
+            </p>
+
+            <div class="experience-tech">
+              <span>ASP.NET MVC</span>
+              <span>ASP.NET Web Forms</span>
+              <span>C#</span>
+              <span>Oracle</span>
+              <span>SQL Server</span>
+              <span>PL/SQL</span>
+              <span>ADO.NET</span>
+              <span>JavaScript</span>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <div class="experience-header">
+              <div>
+                <h3>Tehran Province Police</h3>
+                <p class="experience-role">Software Development</p>
+              </div>
+
+              <span class="experience-date">2004–2010</span>
+            </div>
+
+            <p>
+              I developed and maintained web applications supporting public
+              information, administrative workflows, operational reporting,
+              budgeting, and internal communications. My work included secure
+              data-driven forms, validation rules, approval workflows, and
+              role-based access controls.
+            </p>
+
+            <p>
+              I also built public-facing portals for directories, news, events,
+              articles, and official announcements, including content
+              management, archiving, search, structured navigation, and
+              interactive interfaces.
+            </p>
+
+            <div class="experience-tech">
+              <span>ASP.NET</span>
+              <span>C#</span>
+              <span>.NET Framework</span>
+              <span>SQL Server</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </article>
+        </div>
+      </section>
 
       <section class="about-section">
-
-        <h2>
-          Academic Qualifications
-        </h2>
-
+        <h2>Academic Qualifications</h2>
 
         <div class="qualification">
-
           <div>
-
-            <h3>
-              Master of Information Technology
-            </h3>
-
-            <p>
-              University of New South Wales
-            </p>
-
+            <h3>Master of Information Technology</h3>
+            <p>University of New South Wales</p>
           </div>
 
-          <span class="institution">
-            UNSW
-          </span>
-
+          <span class="institution">UNSW</span>
         </div>
 
-
         <div class="qualification">
-
           <div>
-
-            <h3>
-              Bachelor of Software Engineering
-            </h3>
-
-            <p>
-              Science and Culture University
-            </p>
-
+            <h3>Bachelor of Software Engineering</h3>
+            <p>Science and Culture University</p>
           </div>
 
           <span class="institution">
             Science and Culture University
           </span>
-
         </div>
-
       </section>
 
-
-
-      <!-- =================================================
-           PROFESSIONAL CERTIFICATIONS
-      ================================================== -->
-
       <section class="about-section">
-
-        <h2>
-          Professional Certifications
-        </h2>
-
+        <h2>Professional Certifications</h2>
 
         <div class="cert-grid">
-
-
-          <!-- FABRIC ANALYTICS ENGINEER -->
-
           <div class="cert-card">
-
-            <span class="material-icons">
-              verified
-            </span>
+            <span class="material-icons">verified</span>
 
             <div>
-
               <h3>
                 Microsoft Certified: Fabric Analytics Engineer Associate
               </h3>
-
-              <p>
-                Microsoft · 2026
-              </p>
+              <p>Microsoft · 2026</p>
 
               <a
                 href="https://learn.microsoft.com/api/credentials/share/en-gb/RahelehDalvand-3022/8B2163292B53F226?sharingId=4C4172E6F6C74591"
@@ -801,30 +847,15 @@
               >
                 View Credential
               </a>
-
             </div>
-
           </div>
 
-
-
-          <!-- ADOBE CAMPAIGN -->
-
           <div class="cert-card">
-
-            <span class="material-icons">
-              verified
-            </span>
+            <span class="material-icons">verified</span>
 
             <div>
-
-              <h3>
-                Adobe Campaign Business Practitioner
-              </h3>
-
-              <p>
-                Adobe · 2025
-              </p>
+              <h3>Adobe Campaign Business Practitioner</h3>
+              <p>Adobe · 2025</p>
 
               <a
                 href="https://certification.adobe.com/credential/verify/dcac6da9-cffa-11ef-8f8b-42010a40001c"
@@ -833,30 +864,15 @@
               >
                 View Credential
               </a>
-
             </div>
-
           </div>
 
-
-
-          <!-- POSTGRESQL -->
-
           <div class="cert-card">
-
-            <span class="material-icons">
-              verified
-            </span>
+            <span class="material-icons">verified</span>
 
             <div>
-
-              <h3>
-                PostgreSQL
-              </h3>
-
-              <p>
-                Credly · 2025
-              </p>
+              <h3>PostgreSQL</h3>
+              <p>Credly · 2025</p>
 
               <a
                 href="https://www.credly.com/badges/e295a437-1c91-48ca-86fb-5cd7da8ffb75/linked_in_profile"
@@ -865,30 +881,15 @@
               >
                 View Credential
               </a>
-
             </div>
-
           </div>
 
-
-
-          <!-- AZURE DATA ENGINEER -->
-
           <div class="cert-card">
-
-            <span class="material-icons">
-              verified
-            </span>
+            <span class="material-icons">verified</span>
 
             <div>
-
-              <h3>
-                Microsoft Certified: Azure Data Engineer
-              </h3>
-
-              <p>
-                Microsoft · 2024
-              </p>
+              <h3>Microsoft Certified: Azure Data Engineer</h3>
+              <p>Microsoft · 2024</p>
 
               <a
                 href="https://learn.microsoft.com/api/credentials/share/en-us/RahelehDalvand-3022/D35B25B2879D11FD?sharingId"
@@ -897,30 +898,15 @@
               >
                 View Credential
               </a>
-
             </div>
-
           </div>
 
-
-
-          <!-- POWER BI DATA ANALYST -->
-
           <div class="cert-card">
-
-            <span class="material-icons">
-              verified
-            </span>
+            <span class="material-icons">verified</span>
 
             <div>
-
-              <h3>
-                Microsoft Certified: Power BI Data Analyst
-              </h3>
-
-              <p>
-                Microsoft · 2024
-              </p>
+              <h3>Microsoft Certified: Power BI Data Analyst</h3>F
+              <p>Microsoft · 2024</p>
 
               <a
                 href="https://learn.microsoft.com/api/credentials/share/en-us/RahelehDalvand-3022/B60347E3CF8246B6?sharingId"
@@ -929,32 +915,15 @@
               >
                 View Credential
               </a>
-
             </div>
-
           </div>
-
-
         </div>
-
       </section>
-
-
     </main>
-
   </div>
-
-
-
-  <!-- =====================================================
-       FOOTER
-  ===================================================== -->
 
   <footer>
     &copy; 2026 Raheleh — All rights reserved
   </footer>
-
-
 </body>
-
 </html>
